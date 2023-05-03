@@ -5,8 +5,13 @@ import Reward from './Reward';
 import Statistics from './Statistics';
 import LatestRecipes from './LatestRecipes';
 import Chefs from './Chefs';
+import { useLoaderData } from 'react-router-dom';
 
 const Home = () => {
+  
+  const chefDetails = useLoaderData();
+  console.log(chefDetails);
+
   return (
     <div>
       <HomeBanner></HomeBanner>
