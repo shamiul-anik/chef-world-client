@@ -88,6 +88,30 @@
   background: linear-gradient(90deg, #6275ed 0%, #5567de 100%);
 }
 
+/* Banner Title */
+.banner-title {
+  font-weight: 800;
+  font-size: 64px;
+  line-height: 80px;
+  color: #4d4747;
+}
+
+.highlighted-text {
+  background: linear-gradient(90deg, #6a7cf4 0%, #6275ed 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* Banner Description */
+.banner-description {
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 30px;
+  color: #757575;
+  text-align: justify;
+}
+
 /* Content Title */
 .content-title {
   font-weight: 800;
@@ -123,6 +147,10 @@
 
 .box-shadow-custom {
   box-shadow: 0 0 8px 3px rgba(0 0 0 / 0.1);
+}
+
+.navbar-box-shadow {
+	box-shadow: 0 0 8px 6px rgba(0 0 0 / 0.1);
 }
 
 /* Question Image */

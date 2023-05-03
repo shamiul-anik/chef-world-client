@@ -1,6 +1,7 @@
 import React from 'react';
 import './Header.css';
 import { Link, NavLink } from 'react-router-dom';
+import { TbChefHat } from "react-icons/tb";
 
 const Header = () => {
 	return (
@@ -23,7 +24,10 @@ const Header = () => {
 							</div>
 						</ul>
 					</div>
-					<Link to="/" className="btn px-0 btn-ghost normal-case font-extrabold text-2xl lg:text-3xl text-slate-700 hover:bg-inherit">Chef World</Link>
+					<Link to="/" className="flex gap-2 items-center btn px-0 btn-ghost normal-case font-extrabold text-2xl lg:text-3xl text-slate-700 hover:bg-inherit">
+						<TbChefHat className='h-10 w-10' />
+						Chef World
+					</Link>
 				</div>
 				<div className="navbar-end hidden lg:flex">
 					<ul className="flex gap-10 text-xl font-semibold menu-horizontal px-1">

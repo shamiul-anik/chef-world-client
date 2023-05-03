@@ -1,12 +1,13 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import { TbChefHat } from "react-icons/tb";
 
 const Footer = () => {
   return (
     <footer className="p-10 bg-slate-800 text-slate-100 mt-8 lg:mt-32">
       <div className="footer max-w-7xl mx-auto grid gap:8 lg:gap-28 lg:grid-cols-4">
         <div className="col-span-2">
-          <h3 className="text-3xl text-slate-50 font-bold">Chef World</h3>
+          <h3 className="flex gap-2 items-center text-3xl text-slate-50 font-bold"><TbChefHat className='h-10 w-10' />Chef World</h3>
           <p className="text-justify mt-2 mb-4">If you have any questions or feedback about anything, please don&apos;t hesitate to contact us. We're here to help you with the best answers of you questions.</p>
           <div className="grid grid-flow-col gap-4">
             <Link className="cursor-pointer transition duration-200 transform hover:-translate-y-2 border rounded-full p-2"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" className="fill-current"><path d="M9 8h-3v4h3v12h5v-12h3.642l.358-4h-4v-1.667c0-.955.192-1.333 1.115-1.333h2.885v-5h-3.808c-3.596 0-5.192 1.583-5.192 4.615v3.385z"></path></svg></Link>
@@ -21,13 +22,6 @@ const Footer = () => {
           <Link className="link link-hover">Curry</Link>
           <Link className="link link-hover">Fried Rice</Link>
         </div>
-        {/* <div>
-          <span className="footer-title">Company</span>
-          <Link className="link link-hover">About us</Link>
-          <Link className="link link-hover">Work</Link>
-          <Link className="link link-hover">Latest News</Link>
-          <Link className="link link-hover">Help Desk</Link>
-        </div> */}
         <div>
           <span className="footer-title">Contact</span>
           <p>Email: recipes@chef.com</p>
@@ -35,9 +29,8 @@ const Footer = () => {
           <p>+1 777-978-5570</p>
         </div>
       </div>
-      <div className="max-w-7xl text-sm lg:text-base mx-auto mt-8 pt-6 border-t flex flex-col gap-2 lg:flex-row justify-between items-center">
-        <p>@2023 Chef World. All Rights Reserved</p>
-        <p>Powered by <Link to="/" className="link link-hover">Chef World</Link></p>
+      <div className="max-w-7xl text-sm lg:text-base mx-auto mt-8 pt-6 border-t border-slate-500 flex flex-col gap-2 justify-center items-center">
+        <p>Copyright @ 2023 Chef World. All Rights Reserved</p>
       </div>
     </footer>
   );
