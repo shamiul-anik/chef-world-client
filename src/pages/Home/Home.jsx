@@ -1,25 +1,27 @@
 import React from 'react';
-import HomeBanner from '../HomeBanner/HomeBanner';
+import HomeBanner from './HomeBanner';
+import Newsletter from './Newsletter';
+import Reward from './Reward';
+import Statistics from './Statistics';
+import LatestRecipes from './LatestRecipes';
 
 const Home = () => {
   return (
     <div>
       <HomeBanner></HomeBanner>
 
-      <div className="max-w-7xl mx-auto mt-12 lg:mt-20 p-4">
+      {/* Statistics */}
+      <Statistics></Statistics>
+      
+      {/* Latest Recipes */}
+      <LatestRecipes></LatestRecipes>
+      
+      {/* Share Your Meal and Get Reward */}
+      <Reward></Reward>
 
-        
+      {/* Subscribe to Our Newsletter */}
+      <Newsletter></Newsletter>
 
-        <div className="p-4 lg:p-8 rounded-lg box-shadow-custom mt-6">
-          <header>
-            <h2 className="content-title text-center">Subscribe to Our Newsletter</h2>
-          </header>
-          <p className='content-description text-center'>Subscribe to our newsletter & keep up with our latest recipes and organized workshops.</p>
-          
-
-        </div>
-
-      </div>
     </div>
   );
 };

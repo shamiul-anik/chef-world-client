@@ -88,6 +88,11 @@
   background: linear-gradient(90deg, #6275ed 0%, #5567de 100%);
 }
 
+/* Subscribe Button */
+.subscribe-btn {
+	padding-block: 14px;
+}
+
 /* Banner Title */
 .banner-title {
   font-weight: 800;

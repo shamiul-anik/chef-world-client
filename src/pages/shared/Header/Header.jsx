@@ -52,12 +52,7 @@ const Header = () => {
 							</div>
 						</label>
 						<ul tabIndex={0} className="mt-3 p-3 shadow menu menu-compact dropdown-content bg-base-100 rounded-box w-52">
-							{/* <li>
-								<a className="justify-between">
-									Profile
-									<span className="badge">New</span>
-								</a>
-							</li> */}
+							
 							<div className='w-full flex justify-center'>
 								<div className="mt-2 mb-3 h-16 w-16 rounded-full ring-2 ring-offset-2 ring-slate-400">
 									<img className='h-16 w-16 aspect-square rounded-full object-center' src={ProfilePhoto} />
