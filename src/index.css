@@ -1,3 +1,89 @@
+/* Google Font */
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@500;600;700;800&display=swap");
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer base {
+  html {
+    font-family: "Poppins", sans-serif;
+    scroll-behavior: smooth;
+  }
+}
+
+/* ===== Scrollbar CSS Start ===== */
+/* Firefox */
+* {
+	scrollbar-width: auto;
+	scrollbar-color: #949ba2 #cbd1d6;
+}
+
+/* Chrome, Edge, and Safari */
+*::-webkit-scrollbar {
+	width: 10px;
+	height: 10px;
+}
+
+*::-webkit-scrollbar-track {
+	background: #e3e6e8;
+}
+
+*::-webkit-scrollbar-thumb {
+	background: #cbd1d6;
+	background: linear-gradient(90deg, #bfc5ca 0%, #a2a8ac 61%, #949a9e 100%);
+	border-radius: 10px;
+	transition: all 0.3s;
+}
+
+*::-webkit-scrollbar-thumb:hover {
+	background: #cbd1d6;
+	background: linear-gradient(90deg, #989da0 0%, #888e92 61%, #858b8f 100%);
+}
+/* ===== Scrollbar CSS End ===== */
+
+/* Custom Primary Button */
+/* Large */
+.primary-button-lg {
+  background: linear-gradient(90deg, #6a7cf4 0%, #6275ed 100%);
+  border-radius: 8px;
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 28px;
+  color: #FFFFFF;
+  padding: 18px 28px;
+  transition: all 0.3s;
+}
+
+/* Medium */
+.primary-button-md {
+  background: linear-gradient(90deg, #6a7cf4 0%, #6275ed 100%);
+  border-radius: 8px;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 20px;
+  text-align: center;
+  color: #FFFFFF;
+  padding: 10px 24px;
+  transition: all 0.3s;
+}
+
+.primary-button-sm {
+  background: linear-gradient(90deg, #6a7cf4 0%, #6275ed 100%);
+  border-radius: 8px;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 20px;
+  text-align: center;
+  color: #FFFFFF;
+  padding: 8px 16px;
+  transition: all 0.3s;
+}
+
+/* Primary and Secondary Button Hover */
+.primary-button-lg:hover,
+.primary-button-md:hover,
+.primary-button-sm:hover {
+  cursor: pointer;
+  background: linear-gradient(90deg, #6275ed 0%, #5567de 100%);
+}
