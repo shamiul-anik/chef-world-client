@@ -17,31 +17,15 @@ const LatestRecipes = () => {
 
       <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-4 lg:gap-6 mt-8">
 
-        <div className="card card-compact w-full bg-base-100 shadow-xl">
+        <div className="flex card card-compact w-full bg-base-100 shadow-xl">
           <figure>
             <img src={RecipeImage1} alt="Recipe Image 1" />
           </figure>
-          <div className="p-4 pt-2 pb-6">
+          <div className="flex-1 p-4 pt-2 pb-0">
             <h3 className='text-slate-700 font-semibold'>Rustic cheese and pepperoni pizza</h3>
+          </div>
           <div className='border-t border-slate-300 my-4'></div>
-          <div className='flex items-center justify-between'>
-            <div className='flex items-center gap-2'>
-                <FaTasks /> <span> Easy</span>
-            </div>
-            <div className='flex items-center gap-2'>
-              <FaComment /> <span> 1</span>
-            </div>
-          </div>
-          </div>
-        </div>
-
-        <div className="card card-compact w-full bg-base-100 shadow-xl">
-          <figure>
-            <img src={RecipeImage2} alt="Recipe Image 2" />
-          </figure>
-          <div className="p-4 pt-2 pb-6">
-            <h3 className='text-slate-700 font-semibold'>Delicious and refreshing summer salad</h3>
-            <div className='border-t border-slate-300 my-4'></div>
+          <div className="p-4 pt-0">
             <div className='flex items-center justify-between'>
               <div className='flex items-center gap-2'>
                 <FaTasks /> <span> Easy</span>
@@ -53,13 +37,35 @@ const LatestRecipes = () => {
           </div>
         </div>
 
-        <div className="card card-compact w-full bg-base-100 shadow-xl">
+        <div className="flex card card-compact w-full bg-base-100 shadow-xl">
+          <figure>
+            <img src={RecipeImage2} alt="Recipe Image 2" />
+          </figure>
+          <div className="flex-1 p-4 pt-2 pb-0">
+            <h3 className='text-slate-700 font-semibold'>Delicious and refreshing summer salad</h3>
+          </div>
+          <div className='border-t border-slate-300 my-4'></div>
+          <div className="p-4 pt-0">
+            <div className='flex items-center justify-between'>
+              <div className='flex items-center gap-2'>
+                <FaTasks /> <span> Easy</span>
+              </div>
+              <div className='flex items-center gap-2'>
+                <FaComment /> <span> 1</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div className="flex card card-compact w-full bg-base-100 shadow-xl">
           <figure>
             <img src={RecipeImage3} alt="Recipe Image 3" />
           </figure>
-          <div className="p-4 pt-2 pb-6">
+          <div className="flex-1 p-4 pt-2 pb-0">
             <h3 className='text-slate-700 font-semibold'>Light and tasty vegetarian dinner</h3>
-            <div className='border-t border-slate-300 my-4'></div>
+          </div>
+          <div className='border-t border-slate-300 my-4'></div>
+          <div className="p-4 pt-0">
             <div className='flex items-center justify-between'>
               <div className='flex items-center gap-2'>
                 <FaTasks /> <span> Difficult</span>
@@ -70,14 +76,16 @@ const LatestRecipes = () => {
             </div>
           </div>
         </div>
-
-        <div className="card card-compact w-full bg-base-100 shadow-xl">
+        
+        <div className="flex card card-compact w-full bg-base-100 shadow-xl">
           <figure>
             <img src={RecipeImage4} alt="Recipe Image 4" />
           </figure>
-          <div className="p-4 pt-2 pb-6">
+          <div className="flex-1 p-4 pt-2 pb-0">
             <h3 className='text-slate-700 font-semibold'>Ultimate vegetarian hamburger</h3>
-            <div className='border-t border-slate-300 my-4'></div>
+          </div>
+          <div className='border-t border-slate-300 my-4'></div>
+          <div className="p-4 pt-0">
             <div className='flex items-center justify-between'>
               <div className='flex items-center gap-2'>
                 <FaTasks /> <span> Medium</span>

@@ -4,6 +4,7 @@ import Newsletter from './Newsletter';
 import Reward from './Reward';
 import Statistics from './Statistics';
 import LatestRecipes from './LatestRecipes';
+import Chefs from './Chefs';
 
 const Home = () => {
   return (
@@ -12,6 +13,9 @@ const Home = () => {
 
       {/* Statistics */}
       <Statistics></Statistics>
+      
+      {/* Latest Recipes */}
+      <Chefs></Chefs>
       
       {/* Latest Recipes */}
       <LatestRecipes></LatestRecipes>
