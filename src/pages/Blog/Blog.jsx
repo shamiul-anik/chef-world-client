@@ -1,10 +1,20 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import ReactBanner from '../../assets/images/react-banner.png';
 import Header from '../Shared/Header/Header';
+import { useLocation } from 'react-router-dom';
 
 const Blog = () => {
+  const checkLocation = useLocation();
+
+  useEffect(() => {
+    if (checkLocation.pathname === '/blog') {
+      document.title = 'Chef World | Blog';
+    }
+  }, [checkLocation]);
+
   return (
-    <div className="min-h-[calc(100dvh-611px)]">
+    // <div className="min-h-[calc(100dvh-611px)]">
+    <div>
 
       {/* <Header></Header> */}
       

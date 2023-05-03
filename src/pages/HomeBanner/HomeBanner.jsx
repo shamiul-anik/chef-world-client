@@ -13,7 +13,7 @@ const HomeBanner = () => {
   }, [checkLocation]);
 
   return (
-    <div className="bg-slate-100">
+    <div className="bg-slate-100 mt-1">
       <div className="flex flex-col md:flex-row justify-between items-center gap-8 max-w-7xl mx-auto py-4 lg:py-12">
         <div className="max-w-xl p-4">
           <header>

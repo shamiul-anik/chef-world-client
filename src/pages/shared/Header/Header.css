@@ -26,3 +26,9 @@
   width: 100%;
   background: linear-gradient(90deg, #6a7cf4 0%, #6275ed 100%);
 }
+
+.menu :where(li:not(.menu-title):not(:empty)) > :where(:not(ul).active), .menu :where(li:not(.menu-title):not(:empty)) > :where(*:not(ul):active) {
+  background-color: #e2e3e9 !important;
+  color: #585353 !important;
+  font-weight: bold;
+}
