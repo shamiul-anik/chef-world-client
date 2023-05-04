@@ -17,12 +17,12 @@ export const router = createBrowserRouter([
 			{
 				path: '/',
 				element: <Home></Home>,
-				loader: () => fetch('http://localhost:5000/chefs')
+				loader: () => fetch('https://chef-world-server.vercel.app/chefs')
 			},
 			{
 				path: "/recipes/:id",
 				element: <RecipeDetails></RecipeDetails>,
-				loader: ({ params }) => fetch(`http://localhost:5000/recipes/${params.id}`)
+				loader: ({ params }) => fetch(`https://chef-world-server.vercel.app/recipes/${params.id}`)
 			},
 			{
 				path: 'login',

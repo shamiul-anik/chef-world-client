@@ -9,7 +9,10 @@ At Chef World, we are passionate about celebrating the rich cultural heritage an
 
 So whether you're a beginner or a seasoned pro, we invite you to explore our website and discover the wonderful world of Chinese cuisine. From savory dumplings to spicy stir-fry dishes, there's something for everyone to enjoy and savor. Thank you for choosing Chinese Chef World, and happy cooking!
 
+
 ## Live Website Link
+https://chef-world-shamiul.web.app
+
 
 ## Features of this Project
 1. Full project is made with responsive design for both mobile and pc.
@@ -20,6 +23,7 @@ So whether you're a beginner or a seasoned pro, we invite you to explore our web
 6. An Error handling (404) page with error message and animated text and image added for error handling.
 7. A Blog page with a banner and answers to questions related to React also added.
 8. Dynamic title on the tab added which changes with the menu.
+9. Used Vercel for server side deployment.
 
 <!-- 9. When reloaded page not found error handling for different routes and live server.
 10. Toast alerts . -->
