@@ -2,6 +2,7 @@ import React, { useContext, useState } from 'react';
 import { FaGithub, FaGoogle } from 'react-icons/fa';
 import { Link, useLocation, useNavigate } from 'react-router-dom';
 import { AuthContext } from '../../../providers/AuthProvider';
+import { toast } from 'react-toastify';
 
 const Login = () => {
 
@@ -27,6 +28,7 @@ const Login = () => {
 			.then(result => {
 				const loggedUser = result.user;
 				console.log(loggedUser);
+				toast.success("Successfully logged in!");
 				navigate(from, { replace: true })
 			})
 			.catch(error => {

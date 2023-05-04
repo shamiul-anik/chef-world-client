@@ -3,17 +3,22 @@ import { FaGoogle, FaGithub } from 'react-icons/fa';
 import { Link, useNavigate } from 'react-router-dom';
 import { AuthContext } from '../../../providers/AuthProvider';
 import { toast } from 'react-toastify';
+import app from '../../../utilities/firebase.config';
+import { getAuth, updateProfile } from 'firebase/auth';
+
+const auth = getAuth(app);
 
 const Registration = () => {
 
 	const navigate = useNavigate();
+
+	const { createUser } = useContext(AuthContext);
 
 	const [error, setError] = useState("");
 	const [success, setSuccess] = useState("");
 	const [emailError, setEmailError] = useState("");
 	const [passwordError, setPasswordError] = useState("");
 
-	const { createUser } = useContext(AuthContext);
 	// const [accepted, setAccepted] = useState(false);
 
 	const handleRegistration = (event) => {
@@ -26,6 +31,7 @@ const Registration = () => {
 		console.log(name, photoURL, email, password)
 
 		setSuccess("");
+		setError("");
 		setEmailError("");
 		setPasswordError("");
 
@@ -46,8 +52,12 @@ const Registration = () => {
 
 		createUser(email, password)
 			.then(result => {
-				const createdUser = result.user;
-				console.log(createdUser);
+				const currentUser = result.user;
+				console.log(currentUser);
+				if (name || photoURL) {
+					console.log("inside update condition");
+					updateUserData(currentUser, name, photoURL);
+				}
 				setSuccess("Registration successful!");
 				toast.success("Registration successful!");
 				navigate("/");
@@ -61,10 +71,16 @@ const Registration = () => {
 	//   setAccepted(event.target.checked)
 	// }
 
-	// const handleSubmit = (event) => {
-	// 	event.preventDefault();
-	// 	console.log("submitted!");
-	// };
+	const updateUserData = (currentUser, name, photoURL) => {
+		updateProfile(currentUser, {
+			displayName: name, 
+			photoURL: photoURL
+		}).then(() => {
+			console.log("Profile updated!");
+		}).catch((error) => {
+			setError(error.message);
+		});
+	};
 
 	const handleGoogleLogin = (event) => {
 		event.preventDefault();

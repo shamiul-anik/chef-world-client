@@ -1,7 +1,6 @@
 import React, { useContext } from 'react';
 import './Header.css';
 import { Link, NavLink } from 'react-router-dom';
-import ProfilePhoto from '../../../assets/images/profile.png';
 import { TbChefHat } from "react-icons/tb";
 import { AuthContext } from '../../../providers/AuthProvider';
 import Loader from '../Loader/Loader';
@@ -10,12 +9,16 @@ const Header = () => {
 
 	const { user, logOut, loading } = useContext(AuthContext);
 
+	const currentUserName = user?.displayName || "Welcome, user!";
+	const currentUserPhotoURL = user?.photoURL || "https://i.ibb.co/rwwW7Qw/user.png";
+
 	// Show Loader when Page is Loading
 	if (loading) {
 		return <Loader></Loader>;
 	}
 
-	console.log("Name from Header: ", user?.displayName);
+	console.log("Name from Header: ", currentUserName);
+	console.log("Photo URL from Header: ", currentUserPhotoURL);
 
 	const handleLogOut = () => {
 		logOut()
@@ -80,18 +83,18 @@ const Header = () => {
 					{
 						user && (
 							<div className="dropdown dropdown-end mt-1 ml-6">
-								<label tabIndex={0} className="btn btn-ghost btn-circle avatar tooltip tooltip-bottom" data-tip="Name">
+								<label tabIndex={0} className="btn btn-ghost btn-circle avatar tooltip tooltip-bottom" data-tip={currentUserName}>
 									<div className="w-10 rounded-full ring-2 ring-offset-2 ring-slate-400">
-										<img className='object-top' src={ProfilePhoto} />
+										<img className='object-top' src={currentUserPhotoURL} alt={currentUserName} />
 									</div>
 								</label>
 								<ul tabIndex={0} className="mt-3 p-3 shadow menu menu-compact dropdown-content bg-base-100 rounded-box w-52">
 									<div className='w-full flex justify-center'>
 										<div className="mt-2 mb-3 h-16 w-16 rounded-full ring-2 ring-offset-2 ring-slate-400">
-											<img className='h-16 w-16 aspect-square rounded-full object-center' src={ProfilePhoto} />
+											<img className='h-16 w-full rounded-full object-cover object-center' src={currentUserPhotoURL} alt={currentUserName} />
 										</div>
 									</div>
-									<li className='mt-1 text-center'>User</li>
+									<li className='mt-1 text-center'>{currentUserName}</li>
 									<div className="divider mt-1 mb-2"></div>
 									<li>
 										<Link onClick={handleLogOut} className="bg-red-500 hover:bg-red-600 transition hover:delay-200 text-white font-bold py-2 justify-center">Logout</Link>

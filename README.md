@@ -24,7 +24,7 @@ https://chef-world-shamiul.web.app
 7. A Blog page with a banner and answers to questions related to React also added.
 8. Dynamic title on the tab added which changes with the menu.
 9. Used Vercel for server side deployment.
-
-<!-- 9. When reloaded page not found error handling for different routes and live server.
-10. Toast alerts . -->
+10. When reloaded page not found error handling for different routes and live server.
+11. Toast alerts when favorite recipe button pressed, login and registration is successful.
+12. User's Name and Photo URL update functionality added when registering with email and password.
 
