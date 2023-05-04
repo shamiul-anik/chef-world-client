@@ -7,6 +7,7 @@ import Blog from "../pages/Blog/Blog";
 import Home from "../pages/Home/Home";
 import About from "../pages/About/About";
 import RecipeDetails from "../pages/RecipeDetails/RecipeDetails";
+import PrivateRoute from "./PrivateRoute";
 
 export const router = createBrowserRouter([
 	{
@@ -21,7 +22,7 @@ export const router = createBrowserRouter([
 			},
 			{
 				path: "/recipes/:id",
-				element: <RecipeDetails></RecipeDetails>,
+				element: <PrivateRoute><RecipeDetails></RecipeDetails></PrivateRoute>,
 				loader: ({ params }) => fetch(`https://chef-world-server.vercel.app/recipes/${params.id}`)
 			},
 			{

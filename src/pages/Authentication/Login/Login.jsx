@@ -1,15 +1,44 @@
-import React, { useState } from 'react';
+import React, { useContext, useState } from 'react';
 import { FaGithub, FaGoogle } from 'react-icons/fa';
-import { Link } from 'react-router-dom';
+import { Link, useLocation, useNavigate } from 'react-router-dom';
+import { AuthContext } from '../../../providers/AuthProvider';
 
 const Login = () => {
 
-	const [error, setError] = useState("");
+	const { logIn, setUser } = useContext(AuthContext);
 
-	const handleSubmit = (event) => {
+	const [error, setError] = useState("");
+	
+	const navigate = useNavigate();
+
+	const location = useLocation();
+	console.log('login page location', location)
+	const from = location.state?.from?.pathname || '/'
+
+	const handleLogin = (event) => {
 		event.preventDefault();
-		console.log("submitted!");
+		const form = event.target;
+		const email = form.email.value;
+		const password = form.password.value;
+		// const name = form.name.value;
+		// const photoURL = form.photoURL.value;
+		console.log(email, password);
+
+		logIn(email, password)
+			.then(result => {
+				const loggedUser = result.user;
+				setUser(loggedUser);
+				navigate(from, { replace: true })
+			})
+			.catch(error => {
+				setError(error.message);
+			})
 	};
+
+	// const handleSubmit = (event) => {
+	// 	event.preventDefault();
+	// 	console.log("submitted!");
+	// };
 	
 	const handleGoogleLogin = (event) => {
 		event.preventDefault();
@@ -33,7 +62,7 @@ const Login = () => {
 
 				<p className="!px-6 md:!px-8 text-red-500 mt-2 text-center">{error}</p>
 				
-				<form onSubmit={handleSubmit}>
+				<form onSubmit={handleLogin}>
 					<div className="!px-6 md:!px-8 !pt-2 card-body">
 						<div className="form-control">
 							<label className="label pl-0" htmlFor="email">
