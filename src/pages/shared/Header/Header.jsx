@@ -20,6 +20,9 @@ const Header = () => {
 							<li>
 								<NavLink to="/blog">Blog</NavLink>
 							</li>
+							<li>
+								<NavLink to="/about">About</NavLink>
+							</li>
 							<div className="flex mt-2">
 								<Link to="/login" className="primary-button-sm flex-1">Login</Link>
 							</div>
@@ -38,6 +41,9 @@ const Header = () => {
 						</li>
 						<li className="nav-item hover:cursor-pointer">
 							<NavLink to="/blog">Blog</NavLink>
+						</li>
+						<li className="nav-item hover:cursor-pointer">
+							<NavLink to="/about">About</NavLink>
 						</li>
 						<li>
 							<Link to="/login" className="primary-button-md">Login</Link>

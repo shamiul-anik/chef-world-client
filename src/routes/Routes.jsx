@@ -5,6 +5,7 @@ import Registration from "../pages/Authentication/Registration/Registration";
 import MainLayout from "../layouts/MainLayout";
 import Blog from "../pages/Blog/Blog";
 import Home from "../pages/Home/Home";
+import About from "../pages/About/About";
 
 export const router = createBrowserRouter([
 	{
@@ -28,6 +29,10 @@ export const router = createBrowserRouter([
 			{
 				path: 'blog',
 				element: <Blog></Blog>
+			},
+			{
+				path: 'about',
+				element: <About></About>
 			}
 		]
 	}
