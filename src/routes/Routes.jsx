@@ -17,11 +17,12 @@ export const router = createBrowserRouter([
 			{
 				path: '/',
 				element: <Home></Home>,
-				loader: () => fetch('./data/chefs.json')
+				loader: () => fetch('http://localhost:5000/chefs')
 			},
 			{
 				path: "/recipes/:id",
 				element: <RecipeDetails></RecipeDetails>,
+				loader: ({ params }) => fetch(`http://localhost:5000/recipes/${params.id}`)
 			},
 			{
 				path: 'login',

@@ -10,14 +10,18 @@ import { useLoaderData, useLocation } from 'react-router-dom';
 const Home = () => {
   
   const checkLocation = useLocation();
+  const chefDetailsLoadedData = useLoaderData();
+  const [chefDetails, setChefDetails] = useState([]);
 
   useEffect(() => {
     if (checkLocation.pathname === '/') {
       document.title = 'Chef World | Home';
     }
   }, [checkLocation]);
-  
-  const chefDetails = useLoaderData();
+ 
+  useEffect(() => {
+    setChefDetails(chefDetailsLoadedData);
+  }, [chefDetailsLoadedData]);
 
   return (
     <div>
