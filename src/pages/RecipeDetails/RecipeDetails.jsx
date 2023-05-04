@@ -1,11 +1,14 @@
-import React, { useEffect } from 'react';
-import { useLocation } from 'react-router-dom';
+import React, { useEffect, useState } from 'react';
+import { useLoaderData, useLocation } from 'react-router-dom';
 import RecipeBanner from './RecipeBanner';
 import Recipe from './Recipe';
 
 const RecipeDetails = () => {
 
   const checkLocation = useLocation();
+  const recipeData = useLoaderData();
+  const [recipeDetails, setRecipeDetails] = useState(recipeData);
+  // const [recipeDetails, setRecipeDetails] = useState([]);
 
   const recipes = checkLocation.pathname.match(/recipes/g);
 
@@ -15,16 +18,14 @@ const RecipeDetails = () => {
     }
   }, [recipes]);
 
+  // useEffect(() => {
+  //   setRecipeDetails(recipeData);
+  // }, [recipeData]);
+
   return (
     <div>
-      <RecipeBanner></RecipeBanner>
-
-      <section className="max-w-7xl mx-auto mt-12 lg:mt-20 p-4">
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-4 lg:gap-6 mt-8">
-          <Recipe></Recipe>
-        </div>
-      </section>
-
+      <RecipeBanner recipeDetails={recipeDetails}></RecipeBanner>
+      <Recipe recipeDetails={recipeDetails}></Recipe>
     </div>
   );
 };
