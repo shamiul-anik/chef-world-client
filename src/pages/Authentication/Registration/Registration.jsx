@@ -1,11 +1,15 @@
 import React, { useContext, useState } from 'react';
 import { FaGoogle, FaGithub } from 'react-icons/fa';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import { AuthContext } from '../../../providers/AuthProvider';
+import { toast } from 'react-toastify';
 
 const Registration = () => {
 
+	const navigate = useNavigate();
+
 	const [error, setError] = useState("");
+	const [success, setSuccess] = useState("");
 	const [emailError, setEmailError] = useState("");
 	const [passwordError, setPasswordError] = useState("");
 
@@ -21,6 +25,7 @@ const Registration = () => {
 		const photoURL = form.photoURL.value;
 		console.log(name, photoURL, email, password)
 
+		setSuccess("");
 		setEmailError("");
 		setPasswordError("");
 
@@ -43,6 +48,9 @@ const Registration = () => {
 			.then(result => {
 				const createdUser = result.user;
 				console.log(createdUser);
+				setSuccess("Registration successful!");
+				toast.success("Registration successful!");
+				navigate("/");
 			})
 			.catch(error => {
 				setError(error.message);
@@ -79,6 +87,7 @@ const Registration = () => {
 				<div className='border-t border-slate-300 my-4 mx-6 md:mx-8'></div>
 
 				<p className="!px-6 md:!px-8 text-red-500 mt-2 text-center">{error}</p>
+				<p className="!px-6 md:!px-8 text-green-600 mt-2 text-center">{success}</p>
 
 				<form onSubmit={handleRegistration}>
 					<div className="!px-6 md:!px-8 !pt-2 card-body">
