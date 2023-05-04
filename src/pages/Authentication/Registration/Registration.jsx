@@ -1,6 +1,6 @@
 import React, { useContext, useState } from 'react';
 import { FaGoogle, FaGithub } from 'react-icons/fa';
-import { Link, useNavigate } from 'react-router-dom';
+import { Link, useLocation, useNavigate } from 'react-router-dom';
 import { AuthContext } from '../../../providers/AuthProvider';
 import { toast } from 'react-toastify';
 import app from '../../../utilities/firebase.config';
@@ -12,7 +12,11 @@ const Registration = () => {
 
 	const navigate = useNavigate();
 
-	const { createUser } = useContext(AuthContext);
+	const location = useLocation();
+	console.log('login page location', location)
+	const from = location.state?.from?.pathname || '/';
+
+	const { createUser, signInWithGoogle, signInWithGitHub } = useContext(AuthContext);
 
 	const [error, setError] = useState("");
 	const [success, setSuccess] = useState("");
@@ -54,6 +58,7 @@ const Registration = () => {
 			.then(result => {
 				const currentUser = result.user;
 				console.log(currentUser);
+				form.reset();
 				if (name || photoURL) {
 					console.log("inside update condition");
 					updateUserData(currentUser, name, photoURL);
@@ -82,14 +87,30 @@ const Registration = () => {
 		});
 	};
 
-	const handleGoogleLogin = (event) => {
-		event.preventDefault();
-		console.log("handleGoogleLogin");
+	const handleGoogleLogin = () => {
+		signInWithGoogle()
+			.then(result => {
+				const loggedUser = result.user;
+				console.log(loggedUser);
+				toast.success("Successfully logged in!");
+				navigate(from, { replace: true })
+			})
+			.catch(error => {
+				setError(error.message);
+			})
 	};
 
-	const handleGitHubLogin = (event) => {
-		event.preventDefault();
-		console.log("handleGitHubLogin");
+	const handleGitHubLogin = () => {
+		signInWithGitHub()
+			.then(result => {
+				const loggedUser = result.user;
+				console.log(loggedUser);
+				toast.success("Successfully logged in!");
+				navigate(from, { replace: true })
+			})
+			.catch(error => {
+				setError(error.message);
+			})
 	};
 
 	return (

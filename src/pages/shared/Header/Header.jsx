@@ -48,9 +48,20 @@ const Header = () => {
 							<li>
 								<NavLink to="/about">About</NavLink>
 							</li>
-							<div className="flex mt-2">
-								<Link to="/login" className="primary-button-sm flex-1">Login</Link>
-							</div>
+							{
+								!user && (
+									<div className="flex mt-2">
+										<Link to="/login" className="primary-button-sm flex-1">Login</Link>
+									</div>
+								)
+							}
+							{
+								user && (
+									<div className="flex mt-2">
+										<Link onClick={handleLogOut} className="primary-button-sm flex-1">Logout</Link>
+									</div>
+								)
+							}
 						</ul>
 					</div>
 					<Link to="/" className="flex gap-2 items-center btn px-0 btn-ghost normal-case font-extrabold text-2xl lg:text-3xl text-slate-700 hover:bg-inherit">

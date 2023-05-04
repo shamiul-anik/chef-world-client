@@ -6,7 +6,7 @@ import { toast } from 'react-toastify';
 
 const Login = () => {
 
-	const { logIn, setUser } = useContext(AuthContext);
+	const { logIn, signInWithGoogle, signInWithGitHub } = useContext(AuthContext);
 
 	const [error, setError] = useState("");
 	
@@ -14,7 +14,7 @@ const Login = () => {
 
 	const location = useLocation();
 	console.log('login page location', location)
-	const from = location.state?.from?.pathname || '/'
+	const from = location.state?.from?.pathname || '/';
 
 	const handleLogin = (event) => {
 		event.preventDefault();
@@ -22,6 +22,7 @@ const Login = () => {
 		const email = form.email.value;
 		const password = form.password.value;
 		
+		setError("");
 		console.log(email, password);
 
 		logIn(email, password)
@@ -41,14 +42,30 @@ const Login = () => {
 	// 	console.log("submitted!");
 	// };
 	
-	const handleGoogleLogin = (event) => {
-		event.preventDefault();
-		console.log("handleGoogleLogin");
+	const handleGoogleLogin = () => {
+		signInWithGoogle()
+			.then(result => {
+				const loggedUser = result.user;
+				console.log(loggedUser);
+				toast.success("Successfully logged in!");
+				navigate(from, { replace: true })
+			})
+			.catch(error => {
+				setError(error.message);
+			})
 	};
 	
-	const handleGitHubLogin = (event) => {
-		event.preventDefault();
-		console.log("handleGitHubLogin");
+	const handleGitHubLogin = () => {
+		signInWithGitHub()
+			.then(result => {
+				const loggedUser = result.user;
+				console.log(loggedUser);
+				toast.success("Successfully logged in!");
+				navigate(from, { replace: true })
+			})
+			.catch(error => {
+				setError(error.message);
+			})
 	};
 
 	return (
