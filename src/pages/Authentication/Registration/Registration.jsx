@@ -1,6 +1,7 @@
-import React, { useState } from 'react';
+import React, { useContext, useState } from 'react';
 import { FaGoogle, FaGithub } from 'react-icons/fa';
 import { Link } from 'react-router-dom';
+import { AuthContext } from '../../../providers/AuthProvider';
 
 const Registration = () => {
 
@@ -9,24 +10,42 @@ const Registration = () => {
 	const [passwordError, setPasswordError] = useState("");
 
 	const { createUser } = useContext(AuthContext);
-	const [accepted, setAccepted] = useState(false);
+	// const [accepted, setAccepted] = useState(false);
 
-	const handleRegister = event => {
+	const handleRegistration = (event) => {
 		event.preventDefault();
 		const form = event.target;
-		const name = form.name.value;
-		const photo = form.photo.value;
 		const email = form.email.value;
 		const password = form.password.value;
+		const name = form.name.value;
+		const photoURL = form.photoURL.value;
+		console.log(name, photoURL, email, password)
 
-		console.log(name, photo, email, password)
+		setEmailError("");
+		setPasswordError("");
+
+		if (email.length < 1) {
+			setEmailError("Email field can not be empty!");
+			return;
+		}
+		
+		if (password.length < 1) {
+			setPasswordError("Password field can not be empty!");
+			return;
+		}
+		
+		if (password.length < 6) {
+			setPasswordError("Password should be at least 6 characters long!");
+			return;
+		}
+
 		createUser(email, password)
 			.then(result => {
 				const createdUser = result.user;
 				console.log(createdUser);
 			})
 			.catch(error => {
-				console.log(error);
+				setError(error.message);
 			})
 	};
 
@@ -61,34 +80,34 @@ const Registration = () => {
 
 				<p className="!px-6 md:!px-8 text-red-500 mt-2 text-center">{error}</p>
 
-				<form onSubmit={handleSubmit}>
+				<form onSubmit={handleRegistration}>
 					<div className="!px-6 md:!px-8 !pt-2 card-body">
 						<div className="form-control">
 							<label className="label pl-0" htmlFor="email">
 								<span className="label-text text-lg">Email</span>
 							</label>
-							<input type="email" id="email" name="email" placeholder="Enter your email address" className="input input-bordered" required />
+							<input type="email" id="email" name="email" placeholder="Enter your email address" className="input input-bordered" />
 							<p className="text-red-500 mt-2">{emailError}</p> {/* Error Message */}
 						</div>
 						<div className="form-control">
 							<label className="label pl-0" htmlFor="password">
 								<span className="label-text text-lg">Password</span>
 							</label>
-							<input type="password" id="password" name="password" placeholder="Enter your password" className="input input-bordered" required />
+							<input type="password" id="password" name="password" placeholder="Enter your password" className="input input-bordered" />
 							<p className="text-red-500 mt-2">{passwordError}</p> {/* Error Message */}
 						</div>
 						<div className="form-control">
 							<label className="label pl-0" htmlFor="name">
 								<span className="label-text text-lg">Name</span>
 							</label>
-							<input type="text" id="name" name="name" placeholder="Enter your name" className="input input-bordered" required />
+							<input type="text" id="name" name="name" placeholder="Enter your name" className="input input-bordered" />
 							<p className="text-red-500 mt-2"></p> {/* Error Message */}
 						</div>
 						<div className="form-control">
 							<label className="label pl-0" htmlFor="photoURL">
 								<span className="label-text text-lg">Photo URL</span>
 							</label>
-							<input type="text" id="photoURL" name="photoURL" placeholder="Enter your photo url" className="input input-bordered" required />
+							<input type="text" id="photoURL" name="photoURL" placeholder="Enter your photo url" className="input input-bordered" />
 							<p className="text-red-500 mt-2"></p> {/* Error Message */}
 						</div>
 						<div className="form-control mt-6">

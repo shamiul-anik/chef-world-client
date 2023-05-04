@@ -20,14 +20,13 @@ const Login = () => {
 		const form = event.target;
 		const email = form.email.value;
 		const password = form.password.value;
-		// const name = form.name.value;
-		// const photoURL = form.photoURL.value;
+		
 		console.log(email, password);
 
 		logIn(email, password)
 			.then(result => {
 				const loggedUser = result.user;
-				setUser(loggedUser);
+				console.log(loggedUser);
 				navigate(from, { replace: true })
 			})
 			.catch(error => {

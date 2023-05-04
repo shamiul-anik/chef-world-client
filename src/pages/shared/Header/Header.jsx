@@ -1,10 +1,32 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import './Header.css';
 import { Link, NavLink } from 'react-router-dom';
 import ProfilePhoto from '../../../assets/images/profile.png';
 import { TbChefHat } from "react-icons/tb";
+import { AuthContext } from '../../../providers/AuthProvider';
+import Loader from '../Loader/Loader';
 
 const Header = () => {
+
+	const { user, logOut, loading } = useContext(AuthContext);
+
+	// Show Loader when Page is Loading
+	if (loading) {
+		return <Loader></Loader>;
+	}
+
+	console.log("Name from Header: ", user?.displayName);
+
+	const handleLogOut = () => {
+		logOut()
+			.then((result) => {
+				console.log("Successfully logged out!");
+			})
+			.catch((error) => {
+				console.log(error.message);
+			})
+	};
+
 	return (
 		<div className="box-shadow-custom py-2">
 			<nav className="navbar max-w-7xl mx-auto">
@@ -45,33 +67,39 @@ const Header = () => {
 						<li className="nav-item hover:cursor-pointer">
 							<NavLink to="/about">About</NavLink>
 						</li>
-						<li>
-							<Link to="/login" className="primary-button-md">Login</Link>
-						</li>
+						{
+							!user && (
+								<li>
+									<Link to="/login" className="primary-button-md">Login</Link>
+								</li>
+							)
+						}
 					</ul>
 
-					{/* Profile Image */}
-					<div className="dropdown dropdown-end mt-1">
-						<label tabIndex={0} className="btn btn-ghost btn-circle avatar tooltip tooltip-bottom" data-tip="Name">
-							<div className="w-10 rounded-full ring-2 ring-offset-2 ring-slate-400">
-								<img className='object-top' src={ProfilePhoto} />
+					{/* User Profile */}
+					{
+						user && (
+							<div className="dropdown dropdown-end mt-1 ml-6">
+								<label tabIndex={0} className="btn btn-ghost btn-circle avatar tooltip tooltip-bottom" data-tip="Name">
+									<div className="w-10 rounded-full ring-2 ring-offset-2 ring-slate-400">
+										<img className='object-top' src={ProfilePhoto} />
+									</div>
+								</label>
+								<ul tabIndex={0} className="mt-3 p-3 shadow menu menu-compact dropdown-content bg-base-100 rounded-box w-52">
+									<div className='w-full flex justify-center'>
+										<div className="mt-2 mb-3 h-16 w-16 rounded-full ring-2 ring-offset-2 ring-slate-400">
+											<img className='h-16 w-16 aspect-square rounded-full object-center' src={ProfilePhoto} />
+										</div>
+									</div>
+									<li className='mt-1 text-center'>User</li>
+									<div className="divider mt-1 mb-2"></div>
+									<li>
+										<Link onClick={handleLogOut} className="bg-red-500 hover:bg-red-600 transition hover:delay-200 text-white font-bold py-2 justify-center">Logout</Link>
+									</li>
+								</ul>
 							</div>
-						</label>
-						<ul tabIndex={0} className="mt-3 p-3 shadow menu menu-compact dropdown-content bg-base-100 rounded-box w-52">
-							
-							<div className='w-full flex justify-center'>
-								<div className="mt-2 mb-3 h-16 w-16 rounded-full ring-2 ring-offset-2 ring-slate-400">
-									<img className='h-16 w-16 aspect-square rounded-full object-center' src={ProfilePhoto} />
-								</div>
-							</div>
-							
-							<li className='mt-1 text-center'>Hello, User</li>
-							<div className="divider mt-1 mb-2"></div>
-							<li>
-								<Link to="/login" className="bg-red-500 hover:bg-red-600 transition hover:delay-200 text-white font-bold py-2 justify-center">Logout</Link>
-							</li>
-						</ul>
-					</div>
+						)
+					}
 
 				</div>
 			</nav>
