@@ -9,12 +9,12 @@ const ChefDetail = ({ chefDetail }) => {
   const {id, chef_name, photo_url, years_of_experience, total_recipe_numbers, total_likes} = chefDetail;
 
   return (
-    <div key={id} className="flex card card-compact w-full bg-base-100 shadow-xl">
-          <LazyLoad offset={300}>
-            <figure>
-              <img className='h-96 w-full rounded-t-2xl object-cover' src={photo_url} alt={chef_name} />
-            </figure>
-          </LazyLoad>
+    <div className="flex card card-compact w-full bg-base-100 shadow-xl">
+      <LazyLoad offset={300}>
+        <figure>
+          <img className='h-96 w-full rounded-t-2xl object-cover' src={photo_url} alt={chef_name} />
+        </figure>
+      </LazyLoad>
       <div className="flex-1 p-4 pt-4 pb-1 text-center">
         <h3 className='text-slate-700 text-2xl font-bold'>{chef_name}</h3>
         <p className='text-slate-700 mt-2'>Years of Experience: {years_of_experience}</p>

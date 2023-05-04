@@ -6,6 +6,7 @@ import MainLayout from "../layouts/MainLayout";
 import Blog from "../pages/Blog/Blog";
 import Home from "../pages/Home/Home";
 import About from "../pages/About/About";
+import RecipeDetails from "../pages/RecipeDetails/RecipeDetails";
 
 export const router = createBrowserRouter([
 	{
@@ -16,7 +17,11 @@ export const router = createBrowserRouter([
 			{
 				path: '/',
 				element: <Home></Home>,
-				loader: () => fetch('./data.json')
+				loader: () => fetch('./data/chefs.json')
+			},
+			{
+				path: "/recipes/:id",
+				element: <RecipeDetails></RecipeDetails>,
 			},
 			{
 				path: 'login',

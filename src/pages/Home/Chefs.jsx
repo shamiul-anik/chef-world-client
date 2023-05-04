@@ -1,5 +1,5 @@
 /* eslint-disable react/prop-types */
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import ChefDetail from '../ChefDetail/ChefDetail';
 
 const Chefs = ({ chefDetails }) => {

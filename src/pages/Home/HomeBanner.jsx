@@ -1,18 +1,10 @@
-import React, { useEffect } from 'react';
-import { Link, useLocation } from 'react-router-dom';
+import React from 'react';
+import { Link } from 'react-router-dom';
 import BannerImage from '../../assets/images/chef.png';
 import { FaArrowRight } from 'react-icons/fa';
 
 const HomeBanner = () => {
   
-  const checkLocation = useLocation();
-
-  useEffect(() => {
-    if (checkLocation.pathname === '/') {
-      document.title = 'Chef World | Home';
-    }
-  }, [checkLocation]);
-
   return (
     <div className="bg-slate-100 mt-1">
       <div className="flex flex-col md:flex-row justify-between items-center gap-8 max-w-7xl mx-auto py-4 lg:py-12">

@@ -1,13 +1,21 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import HomeBanner from './HomeBanner';
 import Newsletter from './Newsletter';
 import Reward from './Reward';
 import Statistics from './Statistics';
 import LatestRecipes from './LatestRecipes';
 import Chefs from './Chefs';
-import { useLoaderData } from 'react-router-dom';
+import { useLoaderData, useLocation } from 'react-router-dom';
 
 const Home = () => {
+  
+  const checkLocation = useLocation();
+
+  useEffect(() => {
+    if (checkLocation.pathname === '/') {
+      document.title = 'Chef World | Home';
+    }
+  }, [checkLocation]);
   
   const chefDetails = useLoaderData();
 
