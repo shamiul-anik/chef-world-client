@@ -10,7 +10,6 @@ import { useLoaderData } from 'react-router-dom';
 const Home = () => {
   
   const chefDetails = useLoaderData();
-  console.log(chefDetails);
 
   return (
     <div>
@@ -19,8 +18,8 @@ const Home = () => {
       {/* Statistics */}
       <Statistics></Statistics>
       
-      {/* Latest Recipes */}
-      <Chefs></Chefs>
+      {/* Our Chefs */}
+      <Chefs chefDetails={chefDetails}></Chefs>
       
       {/* Latest Recipes */}
       <LatestRecipes></LatestRecipes>

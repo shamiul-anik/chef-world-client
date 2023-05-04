@@ -6,6 +6,7 @@
 		"photo_url": "https://i.ibb.co/vXb9ZsC/chef1.webp",
 		"years_of_experience": 20,
 		"total_recipe_numbers": 5,
+		"total_likes": 5300,
 		"recipes": [
 			{
 				"recipe_name": "Kung Pao Chicken",
@@ -18,7 +19,7 @@
 				],
 				"cooking_method": "Stir-fry the chicken until cooked, then add the peanuts, dried chili peppers, and green onions. Add the sauce and stir until the chicken is coated.",
 				"rating": 4.5,
-				"total_likes": 1000
+				"likes": 1000
 			},
 			{
 				"recipe_name": "Hot and Sour Soup",
@@ -31,7 +32,7 @@
 				],
 				"cooking_method": "Boil meat bones to make broth. Add bamboo shoots, tofu, and mushrooms, then bring to a boil. Whisk the egg and slowly pour it into the soup while stirring. Add vinegar and pepper to taste.",
 				"rating": 4,
-				"total_likes": 800
+				"likes": 800
 			},
 			{
 				"recipe_name": "Mapo Tofu",
@@ -44,7 +45,7 @@
 				],
 				"cooking_method": "Brown the meat in a pan, then add garlic and Sichuan peppercorns. Add the tofu and stir gently. Add the sauce and stir until the tofu is coated. Top with green onions.",
 				"rating": 4.2,
-				"total_likes": 1200
+				"likes": 1200
 			},
 			{
 				"recipe_name": "Dumplings",
@@ -60,7 +61,7 @@
 				],
 				"cooking_method": "Mix the meat, chives, ginger, garlic, soy sauce, rice vinegar, and sesame oil in a bowl. Place a spoonful of filling in the center of each wonton wrapper and fold into a dumpling shape. Boil the dumplings until cooked.",
 				"rating": 4.7,
-				"total_likes": 1500
+				"likes": 1500
 			},
 			{
 				"recipe_name": "Stir-fried Green Beans",
@@ -73,7 +74,7 @@
 				],
 				"cooking_method": "Stir-fry the green beans in oil until tender. Add garlic and ginger and stir-fry for another minute. Add soy sauce and stir to coat the green beans.",
 				"rating": 4.1,
-				"total_likes": 900
+				"likes": 900
 			}
 		]
 	},
@@ -84,6 +85,7 @@
 		"photo_url": "https://i.ibb.co/vjGBZNM/chef2.jpg",
 		"years_of_experience": 15,
 		"total_recipe_numbers": 4,
+		"total_likes": 4600,
 		"recipes": [
 			{
 				"recipe_name": "Dumplings",
@@ -99,7 +101,7 @@
 				],
 				"cooking_method": "Mix the meat, chives, ginger, garlic, soy sauce, rice vinegar, and sesame oil in a bowl. Place a spoonful of filling in the center of each wonton wrapper and fold into a dumpling shape. Boil the dumplings until cooked.",
 				"rating": 4.7,
-				"total_likes": 1500
+				"likes": 1500
 			},
 			{
 				"recipe_name": "Stir-fried Green Beans",
@@ -112,7 +114,7 @@
 				],
 				"cooking_method": "Stir-fry the green beans in oil until tender. Add garlic and ginger and stir-fry for another minute. Add soy sauce and stir to coat the green beans.",
 				"rating": 4.1,
-				"total_likes": 900
+				"likes": 900
 			},
 			{
 				"recipe_name": "Kung Pao Shrimp",
@@ -125,7 +127,7 @@
 				],
 				"cooking_method": "Stir-fry the shrimp until cooked, then add the peanuts, dried chili peppers, and green onions. Add the sauce and stir until the shrimp is coated.",
 				"rating": 4.3,
-				"total_likes": 1100
+				"likes": 1100
 			},
 			{
 				"recipe_name": "Kung Pao Chicken",
@@ -138,7 +140,7 @@
 				],
 				"cooking_method": "Stir-fry the chicken until cooked, then add the peanuts, dried chili peppers, and green onions. Add the sauce and stir until the chicken is coated.",
 				"rating": 4.4,
-				"total_likes": 1000
+				"likes": 1000
 			}
 		]
 	},
@@ -149,6 +151,7 @@
 		"photo_url": "https://i.ibb.co/TT4q8Nd/chef3.jpg",
 		"years_of_experience": 12,
 		"total_recipe_numbers": 3,
+		"total_likes": 4400,
 		"recipes": [
 			{
 				"recipe_name": "Xiaolongbao",
@@ -164,7 +167,7 @@
 				],
 				"cooking_method": "Mix the meat, ginger, garlic, soy sauce, and sesame oil in a bowl. Make the dough by mixing flour and water, then roll the dough into small circles. Add the filling in the center of the circles and pleat the edges to form a pouch. Steam the dumplings for 10 minutes.",
 				"rating": 4.8,
-				"total_likes": 1800
+				"likes": 1800
 			},
 			{
 				"recipe_name": "Shanghai Fried Noodles",
@@ -182,7 +185,7 @@
 				],
 				"cooking_method": "Cook the noodles according to the package directions. Heat the oil in a wok and add the meat, mushrooms, cabbage, carrots, onion, and garlic. Stir-fry for a few minutes, then add the noodles and sauces. Stir-fry until the noodles are coated.",
 				"rating": 4.5,
-				"total_likes": 1200
+				"likes": 1200
 			},
 			{
 				"recipe_name": "Braised Meat Belly",
@@ -198,7 +201,7 @@
 				],
 				"cooking_method": "Cut the meat belly into pieces and brown them in a pot. Add the rock sugar, soy sauce, rice wine, scallions, ginger, star anise, and cinnamon stick. Cover and simmer for 2-3 hours until the meat is tender.",
 				"rating": 4.6,
-				"total_likes": 1400
+				"likes": 1400
 			}
 		]
 	},
@@ -209,6 +212,7 @@
 		"photo_url": "https://i.ibb.co/R4s56Rj/chef4.jpg",
 		"years_of_experience": 10,
 		"total_recipe_numbers": 5,
+		"total_likes": 5300,
 		"recipes": [
 			{
 				"recipe_name": "Kung Pao Chicken",
@@ -221,7 +225,7 @@
 				],
 				"cooking_method": "Stir-fry the chicken until cooked, then add the peanuts, dried chili peppers, and green onions. Add the sauce and stir until the chicken is coated.",
 				"rating": 4.5,
-				"total_likes": 1000
+				"likes": 1000
 			},
 			{
 				"recipe_name": "Hot and Sour Soup",
@@ -234,7 +238,7 @@
 				],
 				"cooking_method": "Boil meat bones to make broth. Add bamboo shoots, tofu, and mushrooms, then bring to a boil. Whisk the egg and slowly pour it into the soup while stirring. Add vinegar and pepper to taste.",
 				"rating": 4,
-				"total_likes": 800
+				"likes": 800
 			},
 			{
 				"recipe_name": "Mapo Tofu",
@@ -247,7 +251,7 @@
 				],
 				"cooking_method": "Brown the meat in a pan, then add garlic and Sichuan peppercorns. Add the tofu and stir gently. Add the sauce and stir until the tofu is coated. Top with green onions.",
 				"rating": 4.2,
-				"total_likes": 1200
+				"likes": 1200
 			},
 			{
 				"recipe_name": "Dumplings",
@@ -263,7 +267,7 @@
 				],
 				"cooking_method": "Mix the meat, chives, ginger, garlic, soy sauce, rice vinegar, and sesame oil in a bowl. Place a spoonful of filling in the center of each wonton wrapper and fold into a dumpling shape. Boil the dumplings until cooked.",
 				"rating": 4.7,
-				"total_likes": 1500
+				"likes": 1400
 			},
 			{
 				"recipe_name": "Stir-fried Green Beans",
@@ -276,7 +280,7 @@
 				],
 				"cooking_method": "Stir-fry the green beans in oil until tender. Add garlic and ginger and stir-fry for another minute. Add soy sauce and stir to coat the green beans.",
 				"rating": 4.1,
-				"total_likes": 900
+				"likes": 900
 			}
 		]
 	},
@@ -287,6 +291,7 @@
 		"photo_url": "https://i.ibb.co/2jfFmHx/chef5.webp",
 		"years_of_experience": 25,
 		"total_recipe_numbers": 6,
+		"total_likes": 600,
 		"recipes": [
 			{
 				"recipe_name": "Dumplings",
@@ -302,7 +307,7 @@
 				],
 				"cooking_method": "Mix the meat, chives, ginger, garlic, soy sauce, rice vinegar, and sesame oil in a bowl. Place a spoonful of filling in the center of each wonton wrapper and fold into a dumpling shape. Boil the dumplings until cooked.",
 				"rating": 4.7,
-				"total_likes": 1500
+				"likes": 1500
 			},
 			{
 				"recipe_name": "Stir-fried Green Beans",
@@ -315,7 +320,7 @@
 				],
 				"cooking_method": "Stir-fry the green beans in oil until tender. Add garlic and ginger and stir-fry for another minute. Add soy sauce and stir to coat the green beans.",
 				"rating": 4.1,
-				"total_likes": 900
+				"likes": 800
 			},
 			{
 				"recipe_name": "Kung Pao Shrimp",
@@ -328,7 +333,7 @@
 				],
 				"cooking_method": "Stir-fry the shrimp until cooked, then add the peanuts, dried chili peppers, and green onions. Add the sauce and stir until the shrimp is coated.",
 				"rating": 4.3,
-				"total_likes": 1100
+				"likes": 700
 			},
 			{
 				"recipe_name": "Kung Pao Chicken",
@@ -341,7 +346,7 @@
 				],
 				"cooking_method": "Stir-fry the chicken until cooked, then add the peanuts, dried chili peppers, and green onions. Add the sauce and stir until the chicken is coated.",
 				"rating": 4.4,
-				"total_likes": 1000
+				"likes": 1000
 			},
 			{
 				"recipe_name": "Mapo Tofu",
@@ -354,7 +359,7 @@
 				],
 				"cooking_method": "Brown the meat in a pan, then add garlic and Sichuan peppercorns. Add the tofu and stir gently. Add the sauce and stir until the tofu is coated. Top with green onions.",
 				"rating": 4.2,
-				"total_likes": 1200
+				"likes": 1200
 			},
 			{
 				"recipe_name": "Hot and Sour Soup",
@@ -367,7 +372,7 @@
 				],
 				"cooking_method": "Boil meat bones to make broth. Add bamboo shoots, tofu, and mushrooms, then bring to a boil. Whisk the egg and slowly pour it into the soup while stirring. Add vinegar and pepper to taste.",
 				"rating": 4,
-				"total_likes": 800
+				"likes": 800
 			}
 		]
 	},
@@ -378,6 +383,7 @@
 		"photo_url": "https://i.ibb.co/XkJ8Z3T/chef6.jpg",
 		"years_of_experience": 13,
 		"total_recipe_numbers": 6,
+		"total_likes": 9000,
 		"recipes": [
 			{
 				"recipe_name": "Xiaolongbao",
@@ -393,7 +399,7 @@
 				],
 				"cooking_method": "Mix the meat, ginger, garlic, soy sauce, and sesame oil in a bowl. Make the dough by mixing flour and water, then roll the dough into small circles. Add the filling in the center of the circles and pleat the edges to form a pouch. Steam the dumplings for 10 minutes.",
 				"rating": 4.8,
-				"total_likes": 1800
+				"likes": 1800
 			},
 			{
 				"recipe_name": "Shanghai Fried Noodles",
@@ -411,7 +417,7 @@
 				],
 				"cooking_method": "Cook the noodles according to the package directions. Heat the oil in a wok and add the meat, mushrooms, cabbage, carrots, onion, and garlic. Stir-fry for a few minutes, then add the noodles and sauces. Stir-fry until the noodles are coated.",
 				"rating": 4.5,
-				"total_likes": 1200
+				"likes": 1200
 			},
 			{
 				"recipe_name": "Braised Meat Belly",
@@ -427,7 +433,7 @@
 				],
 				"cooking_method": "Cut the meat belly into pieces and brown them in a pot. Add the rock sugar, soy sauce, rice wine, scallions, ginger, star anise, and cinnamon stick. Cover and simmer for 2-3 hours until the meat is tender.",
 				"rating": 4.6,
-				"total_likes": 1400
+				"likes": 1400
 			},
 			{
         "recipe_name": "Steamed Fish",
@@ -441,7 +447,7 @@
         ],
         "cooking_method": "Steam the fish with soy sauce, rice vinegar, sesame oil, ginger, and scallions. Serve hot with steamed rice.",
         "rating": 4.3,
-        "total_likes": 1800
+        "likes": 1800
       },
       {
         "recipe_name": "Egg Drop Soup",
@@ -455,7 +461,7 @@
         ],
         "cooking_method": "Heat the chicken broth. Beat the eggs in a separate bowl. Add the cornstarch and eggs into the broth while stirring. Add in chopped green onions, sesame oil, and white pepper. Serve hot.",
         "rating": 4.1,
-        "total_likes": 1500
+        "likes": 1500
       },
       {
         "recipe_name": "Wonton Soup",
@@ -470,7 +476,7 @@
         ],
         "cooking_method": "Mix the ground meat with chopped green onions, soy sauce, and sesame oil. Place a spoonful of filling in the center of each wonton wrapper and fold into a wonton shape. Boil the wontons in chicken broth until cooked through. Add in chopped bok choy before serving.",
         "rating": 4.6,
-        "total_likes": 1100
+        "likes": 1100
       }
 		]
 	}

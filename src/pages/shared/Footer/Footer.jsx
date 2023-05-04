@@ -4,7 +4,7 @@ import { TbChefHat } from "react-icons/tb";
 
 const Footer = () => {
   return (
-    <footer className="p-8 md:p-12 bg-slate-800 text-slate-100 mt-8 lg:mt-32">
+    <footer className="p-8 md:pt-12 md:pb-8 bg-slate-800 text-slate-100 mt-8 lg:mt-32">
       <div className="footer max-w-7xl mx-auto grid gap:8 lg:gap-28 lg:grid-cols-4">
         <div className="col-span-2">
           <h3 className="flex gap-2 items-center text-3xl text-slate-50 font-bold"><TbChefHat className='h-10 w-10' />Chef World</h3>
