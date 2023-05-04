@@ -27,4 +27,5 @@ https://chef-world-shamiul.web.app
 10. When reloaded page not found error handling for different routes and live server.
 11. Toast alerts when favorite recipe button pressed, login and registration is successful.
 12. User's Name and Photo URL update functionality added when registering with email and password.
+13. PDF creation functionality added in Blog page.
 
