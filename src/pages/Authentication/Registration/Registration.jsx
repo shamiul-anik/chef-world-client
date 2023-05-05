@@ -182,9 +182,9 @@ const Registration = () => {
 						<div className="form-control mt-4">
 							<label className="label !justify-start gap-2 cursor-pointer">
 								<input onChange={handleAcceptTerms} type="checkbox" className="checkbox border-gray-400 shadow-sm" id="terms" />
-								<span htmlFor="terms" className="label-text text-lg">Accept</span>
+								<span htmlFor="terms" className="label-text text-md md:text-lg">Accept</span>
 								{/* To Open Modal */}
-								<label htmlFor="terms-modal" className="text-lg link link-primary"> Terms & Conditions.</label>
+								<label htmlFor="terms-modal" className="text-md md:text-lg link link-primary"> Terms & Conditions.</label>
 							</label>
 						</div>
 						<div className="form-control mt-1">
