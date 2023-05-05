@@ -7,7 +7,9 @@ Whether you're a professional chef looking to expand your knowledge and skills, 
 
 At Chef World, we are passionate about celebrating the rich cultural heritage and culinary traditions of China. We believe that food is not just about nourishment, but also a form of art and expression that reflects the unique history, values, and traditions of a society. That's why we are committed to showcasing the best of Chinese cuisine and promoting its appreciation around the world.
 
-So whether you're a beginner or a seasoned pro, we invite you to explore our website and discover the wonderful world of Chinese cuisine. From savory dumplings to spicy stir-fry dishes, there's something for everyone to enjoy and savor. Thank you for choosing Chinese Chef World, and happy cooking!
+So whether you're a beginner or a seasoned pro, we invite you to explore our website and discover the wonderful world of Chinese cuisine. From savory dumplings to spicy stir-fry dishes, there's something for everyone to enjoy and savor. 
+
+Thank you for choosing Chef World, and happy cooking!
 
 
 ## Live Website Link
