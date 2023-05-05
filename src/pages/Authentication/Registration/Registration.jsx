@@ -4,8 +4,11 @@ import { Link, useNavigate } from 'react-router-dom';
 import { AuthContext } from '../../../providers/AuthProvider';
 import { toast } from 'react-toastify';
 import { updateProfile } from 'firebase/auth';
+import { useTitle } from '../../../hooks/useTitle';
 
 const Registration = () => {
+
+	useTitle("Registration");
 
 	const navigate = useNavigate();
 

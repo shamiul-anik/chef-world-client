@@ -3,8 +3,11 @@ import { FaGithub, FaGoogle, FaRegEye, FaRegEyeSlash } from 'react-icons/fa';
 import { Link, useLocation, useNavigate } from 'react-router-dom';
 import { AuthContext } from '../../../providers/AuthProvider';
 import { toast } from 'react-toastify';
+import { useTitle } from '../../../hooks/useTitle';
 
 const Login = () => {
+
+	useTitle("Login");
 
 	const { setLoading, logIn, signInWithGoogle, signInWithGitHub } = useContext(AuthContext);
 
