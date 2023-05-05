@@ -33,4 +33,5 @@ https://chef-world-shamiul.web.app
 12. User's Name and Photo URL update functionality added when registering with email and password.
 13. PDF creation functionality added in Blog page.
 14. Show/Hide password feature added in Login and Registration page.
+15. Accept terms and conditions to continue with the registration process functionality added.
 
