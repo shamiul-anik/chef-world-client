@@ -1,5 +1,5 @@
 import React, { useContext, useState } from 'react';
-import { FaGoogle, FaGithub } from 'react-icons/fa';
+import { FaGoogle, FaGithub, FaRegEyeSlash, FaRegEye } from 'react-icons/fa';
 import { Link, useNavigate } from 'react-router-dom';
 import { AuthContext } from '../../../providers/AuthProvider';
 import { toast } from 'react-toastify';
@@ -15,6 +15,7 @@ const Registration = () => {
 	const [success, setSuccess] = useState("");
 	const [emailError, setEmailError] = useState("");
 	const [passwordError, setPasswordError] = useState("");
+	const [showPassword, setShowPassword] = useState(false);
 
 	// const [accepted, setAccepted] = useState(false);
 
@@ -51,18 +52,23 @@ const Registration = () => {
 			.then(result => {
 				const currentUser = result.user;
 				console.log(currentUser);
-				form.reset();
 				if (name || photoURL) {
 					console.log("inside update condition");
 					updateUserData(currentUser, name, photoURL);
 				}
 				setSuccess("Registration successful!");
 				toast.success("Registration successful!");
+				form.reset();
 				navigate("/");
 			})
 			.catch(error => {
 				setError(error.message);
 			})
+	};
+
+	const handleShowPassword = (event) => {
+		event.preventDefault();
+		setShowPassword(!showPassword);
 	};
 
 	// const handleAccepted = event => {
@@ -128,13 +134,26 @@ const Registration = () => {
 							<input type="email" id="email" name="email" placeholder="Enter your email address" className="input input-bordered" />
 							<p className="text-red-500 mt-2">{emailError}</p> {/* Error Message */}
 						</div>
-						<div className="form-control">
+						{/* <div className="form-control">
 							<label className="label pl-0" htmlFor="password">
 								<span className="label-text text-lg">Password</span>
 							</label>
 							<input type="password" id="password" name="password" placeholder="Enter your password" className="input input-bordered" autoComplete='true' />
-							<p className="text-red-500 mt-2">{passwordError}</p> {/* Error Message */}
+							<p className="text-red-500 mt-2">{passwordError}</p>
+						</div> */}
+						<div className="relative form-control">
+							<label className="label pl-0" htmlFor="password">
+								<span className="label-text text-lg">Password</span>
+							</label>
+							<input type={showPassword ? "text" : "password"} id="password" name="password" placeholder="Enter your password" className="input input-bordered" autoComplete='true' required />
+							<button onClick={handleShowPassword} className="btn btn-ghost absolute bottom-0 right-0 rounded-l-none">
+								{
+									showPassword ? <FaRegEyeSlash className='text-lg md:text-xl font-bold' /> : <FaRegEye className='text-lg md:text-xl font-bold' />
+								}
+							</button>
 						</div>
+						<p className="text-red-500">{passwordError}</p>
+
 						<div className="form-control">
 							<label className="label pl-0" htmlFor="name">
 								<span className="label-text text-lg">Name</span>
