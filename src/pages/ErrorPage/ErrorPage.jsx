@@ -3,11 +3,14 @@ import { Link, useRouteError } from 'react-router-dom';
 import Lottie from "lottie-react";
 import PageNotFound from '../../assets/lottie/page-not-found-404.json';
 import { FaArrowLeft } from 'react-icons/fa';
+import { useTitle } from '../../hooks/useTitle';
 
 const ErrorPage = () => {
 
+  useTitle("Error");
+
   const error = useRouteError();
-  console.log(error);
+  // console.log(error);
 
   return (
     <div className="flex flex-col justify-center items-center min-h-[100dvh] p-16">

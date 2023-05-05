@@ -5,19 +5,24 @@ import Reward from './Reward';
 import Statistics from './Statistics';
 import LatestRecipes from './LatestRecipes';
 import Chefs from './Chefs';
-import { useLoaderData, useLocation } from 'react-router-dom';
+import { useLoaderData } from 'react-router-dom';
+import { useTitle } from '../../hooks/useTitle';
 
 const Home = () => {
   
-  const checkLocation = useLocation();
+  useTitle("Home");
+
   const chefDetailsLoadedData = useLoaderData();
   const [chefDetails, setChefDetails] = useState([]);
+  
+  // const checkLocation = useLocation();
+  // useEffect(() => {
+  //   if (checkLocation.pathname === '/') {
+  //     document.title = 'Chef World | Home';
+  //   }
+  // }, [checkLocation]);
 
-  useEffect(() => {
-    if (checkLocation.pathname === '/') {
-      document.title = 'Chef World | Home';
-    }
-  }, [checkLocation]);
+
  
   useEffect(() => {
     setChefDetails(chefDetailsLoadedData);

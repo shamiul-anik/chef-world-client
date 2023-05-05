@@ -1,17 +1,20 @@
-import React, { useEffect } from 'react';
+import React from 'react';
 import ReactBanner from '../../assets/images/react-banner.png';
-import { useLocation } from 'react-router-dom';
 import Pdf from "react-to-pdf";
 import { toast } from 'react-toastify';
+import { useTitle } from '../../hooks/useTitle';
 
 const Blog = () => {
-  const checkLocation = useLocation();
 
-  useEffect(() => {
-    if (checkLocation.pathname === '/blog') {
-      document.title = 'Chef World | Blog';
-    }
-  }, [checkLocation]);
+  useTitle("Blog");
+  
+  // const checkLocation = useLocation();
+
+  // useEffect(() => {
+  //   if (checkLocation.pathname === '/blog') {
+  //     document.title = 'Chef World | Blog';
+  //   }
+  // }, [checkLocation]);
 
   const ref = React.createRef();
   const options = {

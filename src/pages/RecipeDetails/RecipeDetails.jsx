@@ -1,22 +1,25 @@
-import React, { useEffect, useState } from 'react';
-import { useLoaderData, useLocation } from 'react-router-dom';
+import React, { useState } from 'react';
+import { useLoaderData } from 'react-router-dom';
 import RecipeBanner from './RecipeBanner';
 import Recipe from './Recipe';
+import { useTitle } from '../../hooks/useTitle';
 
 const RecipeDetails = () => {
 
-  const checkLocation = useLocation();
+  useTitle("Recipes");
+
   const recipeData = useLoaderData();
   const [recipeDetails, setRecipeDetails] = useState(recipeData);
   // const [recipeDetails, setRecipeDetails] = useState([]);
+  
+  // const checkLocation = useLocation();
+  // const recipes = checkLocation.pathname.match(/recipes/g);
 
-  const recipes = checkLocation.pathname.match(/recipes/g);
-
-  useEffect(() => {
-    if (recipes[0] === 'recipes') {
-      document.title = 'Chef World | Recipes';
-    }
-  }, [recipes]);
+  // useEffect(() => {
+  //   if (recipes[0] === 'recipes') {
+  //     document.title = 'Chef World | Recipes';
+  //   }
+  // }, [recipes]);
 
   // useEffect(() => {
   //   setRecipeDetails(recipeData);

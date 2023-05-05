@@ -1,15 +1,17 @@
-import React, { useEffect } from 'react';
-import { useLocation } from 'react-router-dom';
+import React from 'react';
+import { useTitle } from '../../hooks/useTitle';
 
 const About = () => {
 
-	const checkLocation = useLocation();
+	useTitle("About");
+	
+	// const checkLocation = useLocation();
 
-	useEffect(() => {
-		if (checkLocation.pathname === '/about') {
-			document.title = 'Chef World | About';
-		}
-	}, [checkLocation]);
+	// useEffect(() => {
+	// 	if (checkLocation.pathname === '/about') {
+	// 		document.title = 'Chef World | About';
+	// 	}
+	// }, [checkLocation]);
 
 	return (
 		<div className="max-w-7xl mx-auto mt-12 lg:mt-20 p-4 text-slate-700 text-justify">
