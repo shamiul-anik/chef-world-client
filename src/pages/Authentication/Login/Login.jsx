@@ -6,7 +6,7 @@ import { toast } from 'react-toastify';
 
 const Login = () => {
 
-	const { logIn, signInWithGoogle, signInWithGitHub } = useContext(AuthContext);
+	const { setLoading, logIn, signInWithGoogle, signInWithGitHub } = useContext(AuthContext);
 
 	const [error, setError] = useState("");
 	
@@ -22,6 +22,8 @@ const Login = () => {
 		const email = form.email.value;
 		const password = form.password.value;
 		
+		setLoading(true);
+		
 		setError("");
 		console.log(email, password);
 
@@ -34,6 +36,8 @@ const Login = () => {
 			})
 			.catch(error => {
 				setError(error.message);
+				toast.error("Enter correct email and password!");
+				setLoading(false);
 			})
 	};
 
@@ -52,6 +56,7 @@ const Login = () => {
 			})
 			.catch(error => {
 				setError(error.message);
+				setLoading(false);
 			})
 	};
 	
@@ -65,6 +70,7 @@ const Login = () => {
 			})
 			.catch(error => {
 				setError(error.message);
+				setLoading(false);
 			})
 	};
 

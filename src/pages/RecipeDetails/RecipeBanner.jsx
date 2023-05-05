@@ -8,7 +8,7 @@ const RecipeBanner = ({ recipeDetails }) => {
   return (
     <div className="bg-slate-100 mt-1">
       <div className="flex flex-col md:flex-row justify-between items-center gap-8 max-w-7xl mx-auto py-4 lg:py-12">
-        <div className="p-4 pb-0 basis-1/2">
+        <div className="p-4 basis-1/2">
           <img className="h-[400px] w-full object-cover object-top image-full rounded-xl shadow-lg" src={photo_url} alt={chef_name} />
         </div>
         <div className="p-4 basis-1/2 self-center">

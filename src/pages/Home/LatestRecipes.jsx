@@ -1,9 +1,9 @@
 import React from 'react';
 import { FaComment, FaTasks } from 'react-icons/fa';
-import RecipeImage1 from '../../assets/images/recipes/recipe1.jpg';
-import RecipeImage2 from '../../assets/images/recipes/recipe2.jpg';
-import RecipeImage3 from '../../assets/images/recipes/recipe3.jpg';
-import RecipeImage4 from '../../assets/images/recipes/recipe4.jpg';
+import RecipeImage1 from '../../assets/images/recipes/shanghai-fried -noodles.jpg';
+import RecipeImage2 from '../../assets/images/recipes/xiaolongbao.jpg';
+import RecipeImage3 from '../../assets/images/recipes/egg-drop-soup.jpg';
+import RecipeImage4 from '../../assets/images/recipes/mapo-tofu.jpg';
 
 const LatestRecipes = () => {
   return (
@@ -19,10 +19,10 @@ const LatestRecipes = () => {
 
         <div className="flex card card-compact w-full bg-base-100 shadow-xl">
           <figure>
-            <img src={RecipeImage1} alt="Recipe Image 1" />
+            <img className='h-56 w-full object-cover' src={RecipeImage1} alt="Shanghai Fried Noodles" />
           </figure>
-          <div className="flex-1 p-4 pt-2 pb-0">
-            <h3 className='text-slate-700 font-semibold'>Rustic cheese and pepperoni pizza</h3>
+          <div className="flex-1 p-4 pt-4 pb-0">
+            <h3 className='text-center text-xl text-slate-700 font-semibold'>Shanghai Fried Noodles</h3>
           </div>
           <div className='border-t border-slate-300 my-4'></div>
           <div className="p-4 pt-0">
@@ -39,10 +39,10 @@ const LatestRecipes = () => {
 
         <div className="flex card card-compact w-full bg-base-100 shadow-xl">
           <figure>
-            <img src={RecipeImage2} alt="Recipe Image 2" />
+            <img className='h-56 w-full object-cover' src={RecipeImage2} alt="Xiaolongbao" />
           </figure>
-          <div className="flex-1 p-4 pt-2 pb-0">
-            <h3 className='text-slate-700 font-semibold'>Delicious and refreshing summer salad</h3>
+          <div className="flex-1 p-4 pt-4 pb-0">
+            <h3 className='text-center text-xl text-slate-700 font-semibold'>Xiaolongbao</h3>
           </div>
           <div className='border-t border-slate-300 my-4'></div>
           <div className="p-4 pt-0">
@@ -59,10 +59,10 @@ const LatestRecipes = () => {
 
         <div className="flex card card-compact w-full bg-base-100 shadow-xl">
           <figure>
-            <img src={RecipeImage3} alt="Recipe Image 3" />
+            <img className='h-56 w-full object-cover' src={RecipeImage3} alt="Egg Drop Soup" />
           </figure>
-          <div className="flex-1 p-4 pt-2 pb-0">
-            <h3 className='text-slate-700 font-semibold'>Light and tasty vegetarian dinner</h3>
+          <div className="flex-1 p-4 pt-4 pb-0">
+            <h3 className='text-center text-xl text-slate-700 font-semibold'>Egg Drop Soup</h3>
           </div>
           <div className='border-t border-slate-300 my-4'></div>
           <div className="p-4 pt-0">
@@ -79,10 +79,10 @@ const LatestRecipes = () => {
         
         <div className="flex card card-compact w-full bg-base-100 shadow-xl">
           <figure>
-            <img src={RecipeImage4} alt="Recipe Image 4" />
+            <img className='h-56 w-full object-cover' src={RecipeImage4} alt="Mapo Tofu" />
           </figure>
-          <div className="flex-1 p-4 pt-2 pb-0">
-            <h3 className='text-slate-700 font-semibold'>Ultimate vegetarian hamburger</h3>
+          <div className="flex-1 p-4 pt-4 pb-0">
+            <h3 className='text-center text-xl text-slate-700 font-semibold'>Mapo Tofu</h3>
           </div>
           <div className='border-t border-slate-300 my-4'></div>
           <div className="p-4 pt-0">

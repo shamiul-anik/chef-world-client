@@ -16,7 +16,7 @@ const SingleRecipe = ({ recipe }) => {
   };
 
   return (
-    <div className="flex card card-compact w-full bg-base-100 shadow-xl">
+    <div className="flex card card-compact w-full bg-base-100 box-shadow-custom">
       <div className="flex-1 p-6 md:p-8 pt-4 pb-1 md:pb-2">
         <h3 className='text-slate-700 text-2xl my-2 font-bold text-center'>{recipe_name}</h3>
         <div>
@@ -43,10 +43,10 @@ const SingleRecipe = ({ recipe }) => {
           {
             favorite ?
               <button className="flex gap-2 items-center tooltip hover:pointer-events-none" disabled data-tip="Added to Favorite">
-                <FaHeart className='text-xl text-red-500' /> Added to Favorite
+                <FaHeart className='text-xl text-red-500' /> <span className="hidden md:block"> Added to Favorite</span>
               </button> :
               <button onClick={handleFavorite} className="flex gap-2 items-center tooltip hover:cursor-pointer" data-tip="Add to Favorite">
-                <FaRegHeart className='text-xl text-slate-700' /> Add to Favorite
+                <FaRegHeart className='text-xl text-slate-700' /> <span className="hidden md:block"> Add to Favorite</span>
               </button>
           }
         </div>

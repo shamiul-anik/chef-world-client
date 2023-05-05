@@ -12,7 +12,7 @@ dist
 dist-ssr
 *.local
 
-src/assets/images/chefs/backup
+src/assets/images/backup
 
 # Editor directories and files
 .vscode/*

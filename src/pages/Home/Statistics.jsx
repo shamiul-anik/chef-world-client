@@ -17,7 +17,7 @@ const Statistics = () => {
 
       <div className="grid md:grid-cols-3 lg:grid-cols-6 gap-4 lg:gap-6 mt-8">
         
-        <div className="card card-compact w-full bg-base-100 shadow-xl">
+        <div className="card card-compact w-full bg-base-100 box-shadow-custom">
           <div className='px-2 pt-6 pb-2 flex justify-center'>
             <TbChefHat className='h-24 w-24 text-slate-600 aspect-square' />
           </div>
@@ -27,7 +27,7 @@ const Statistics = () => {
           </div>
         </div>
         
-        <div className="card card-compact w-full bg-base-100 shadow-xl">
+        <div className="card card-compact w-full bg-base-100 box-shadow-custom">
           <div className='px-2 pt-6 pb-2 flex justify-center'>
             <BiFoodMenu className='h-24 w-24 text-slate-600 aspect-square' />
           </div>
@@ -37,7 +37,7 @@ const Statistics = () => {
           </div>
         </div>
 
-        <div className="card card-compact w-full bg-base-100 shadow-xl">
+        <div className="card card-compact w-full bg-base-100 box-shadow-custom">
           <div className='px-2 pt-6 pb-2 flex justify-center'>
             <FaImage className='h-24 w-24 text-slate-600 aspect-square' />
           </div>
@@ -47,7 +47,7 @@ const Statistics = () => {
           </div>
         </div>
 
-        <div className="card card-compact w-full bg-base-100 shadow-xl">
+        <div className="card card-compact w-full bg-base-100 box-shadow-custom">
           <div className='px-2 pt-6 pb-2 flex justify-center'>
             <FaPenFancy className='h-24 w-24 text-slate-600 aspect-square' />
           </div>
@@ -57,7 +57,7 @@ const Statistics = () => {
           </div>
         </div>
 
-        <div className="card card-compact w-full bg-base-100 shadow-xl">
+        <div className="card card-compact w-full bg-base-100 box-shadow-custom">
           <div className='px-2 pt-6 pb-2 flex justify-center'>
             <FaComments className='h-24 w-24 text-slate-600 aspect-square' />
           </div>
@@ -67,7 +67,7 @@ const Statistics = () => {
           </div>
         </div>
 
-        <div className="card card-compact w-full bg-base-100 shadow-xl">
+        <div className="card card-compact w-full bg-base-100 box-shadow-custom">
           <div className='px-2 pt-6 pb-2 flex justify-center'>
             <RiArticleLine className='h-24 w-24 text-slate-600 aspect-square' />
           </div>

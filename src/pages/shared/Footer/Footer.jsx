@@ -24,10 +24,10 @@ const Footer = () => {
         </div>
         <div className='col-span-2 md:col-span-1'>
           <span className="footer-title text-lg">Recent Recipes</span>
-          <Link className="link link-hover">Pepperoni Pizza</Link>
-          <Link className="link link-hover">Summer Salad</Link>
-          <Link className="link link-hover">Vegetarian Dinner</Link>
-          <Link className="link link-hover">Vegetarian Hamburger</Link>
+          <Link className="link link-hover">Shanghai Fried Noodles</Link>
+          <Link className="link link-hover">Xiaolongbao</Link>
+          <Link className="link link-hover">Egg Drop Soup</Link>
+          <Link className="link link-hover">Mapo Tofu</Link>
         </div>
         <div>
           <span className="footer-title text-lg">Need help?</span>
@@ -37,7 +37,7 @@ const Footer = () => {
         </div>
       </div>
       <div className="max-w-7xl text-sm lg:text-base mx-auto mt-8 pt-6 border-t border-slate-500 flex flex-col gap-2 justify-center items-center">
-        <p>Copyright @ 2023 Chef World. All Rights Reserved</p>
+        <p className='text-center'>Copyright @ 2023 Chef World. All Rights Reserved</p>
       </div>
     </footer>
   );

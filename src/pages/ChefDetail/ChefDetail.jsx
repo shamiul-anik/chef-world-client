@@ -1,5 +1,5 @@
 import React from 'react';
-import { FaRegHeart, FaUserClock } from 'react-icons/fa';
+import { FaThumbsUp, FaUserClock } from 'react-icons/fa';
 import LazyLoad from 'react-lazy-load';
 import { Link } from 'react-router-dom';
 
@@ -20,18 +20,18 @@ const ChefDetail = ({ chefDetail }) => {
         <p className='text-slate-700 mt-2'>Years of Experience: {years_of_experience}</p>
         <p className='text-slate-700 mt-1'>Total Recipes: {total_recipe_numbers}</p>
       </div>
-      <div className="text-center mb-6 md:mt-6 md:mb-4">
+      <div className="text-center mt-5 mb-6 md:mt-6 md:mb-4">
         <Link to={`/recipes/${id}`} className="primary-button-md">View Recipes</Link>
       </div>
       <div className='border-t border-slate-300 my-4'></div>
       <div className="p-4 pt-0">
         <div className='flex items-center justify-between'>
-          <div className='flex items-center gap-2'>
-            <FaUserClock /> <span> {years_of_experience} years</span>
-          </div>
-          <div className='flex items-center gap-2'>
-            <Link to="/"><FaRegHeart /></Link> <span> {total_likes}</span>
-          </div>
+            <div className="flex gap-2 items-center tooltip" data-tip="Years of Experience">
+              <FaUserClock /> <span> {years_of_experience} years</span>
+            </div> 
+            <div className="flex gap-2 items-center tooltip" data-tip="Total Likes">
+              <FaThumbsUp /> <span> {total_likes}</span>
+            </div> 
         </div>
       </div>
     </div>
