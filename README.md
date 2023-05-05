@@ -26,7 +26,7 @@ https://chef-world-shamiul.web.app
 5. Clicking on the View Recipes button will redirect the user to the '/recipes/:id' route showing all the details of the Chefs and their recipes.
 6. An Error handling (404) page with error message and animated text and image added for error handling.
 7. A Blog page with a banner and answers to questions related to React also added.
-8. Dynamic title on the tab added which changes with the menu.
+8. Dynamic title on the tab added which changes with the menu using custom hook.
 9. Used Vercel for server side deployment.
 10. When reloaded page not found error handling for different routes and live server.
 11. Toast alerts when favorite recipe button pressed, login and registration is successful.
