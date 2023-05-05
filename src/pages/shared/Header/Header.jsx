@@ -17,8 +17,8 @@ const Header = () => {
 		return <Loader></Loader>;
 	}
 
-	console.log("Name from Header: ", currentUserName);
-	console.log("Photo URL from Header: ", currentUserPhotoURL);
+	// console.log("Name from Header: ", currentUserName);
+	// console.log("Photo URL from Header: ", currentUserPhotoURL);
 
 	const handleLogOut = () => {
 		logOut()

@@ -13,7 +13,7 @@ const Login = () => {
 	const navigate = useNavigate();
 
 	const location = useLocation();
-	console.log('login page location', location)
+	// console.log('login page location', location)
 	const from = location.state?.from?.pathname || '/';
 
 	const handleLogin = (event) => {
@@ -79,7 +79,7 @@ const Login = () => {
 			<div className="flex card card-compact w-full bg-base-100 shadow-2xl">
 				
 				<div className="flex-1 p-6 md:p-8 pt-5 pb-1 md:pb-2">
-					<h3 className='text-slate-700 text-2xl my-2 font-bold text-center'>Login to your account</h3>
+					<h3 className='text-slate-700 text-2xl my-2 font-bold text-center'>Login to your Account</h3>
 				</div>
 				
 				<div className='border-t border-slate-300 my-4 mx-6 md:mx-8'></div>
@@ -99,7 +99,7 @@ const Login = () => {
 							<label className="label pl-0" htmlFor="password">
 								<span className="label-text text-lg">Password</span>
 							</label>
-							<input type="password" id="password" name="password" placeholder="Enter your password" className="input input-bordered" required />
+							<input type="password" id="password" name="password" placeholder="Enter your password" className="input input-bordered" autoComplete='true' required />
 							<p className="text-red-500 mt-2"></p>
 							{/* <label className="label">
 								<a href="#" className="label-text-alt link link-hover">Forgot password?</a>

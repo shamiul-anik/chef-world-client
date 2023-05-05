@@ -1,20 +1,13 @@
 import React, { useContext, useState } from 'react';
 import { FaGoogle, FaGithub } from 'react-icons/fa';
-import { Link, useLocation, useNavigate } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import { AuthContext } from '../../../providers/AuthProvider';
 import { toast } from 'react-toastify';
-import app from '../../../utilities/firebase.config';
-import { getAuth, updateProfile } from 'firebase/auth';
-
-const auth = getAuth(app);
+import { updateProfile } from 'firebase/auth';
 
 const Registration = () => {
 
 	const navigate = useNavigate();
-
-	const location = useLocation();
-	console.log('login page location', location)
-	const from = location.state?.from?.pathname || '/';
 
 	const { createUser, signInWithGoogle, signInWithGitHub } = useContext(AuthContext);
 
@@ -93,7 +86,7 @@ const Registration = () => {
 				const loggedUser = result.user;
 				console.log(loggedUser);
 				toast.success("Successfully logged in!");
-				navigate(from, { replace: true })
+				navigate("/");
 			})
 			.catch(error => {
 				setError(error.message);
@@ -106,7 +99,7 @@ const Registration = () => {
 				const loggedUser = result.user;
 				console.log(loggedUser);
 				toast.success("Successfully logged in!");
-				navigate(from, { replace: true })
+				navigate("/");
 			})
 			.catch(error => {
 				setError(error.message);
@@ -118,7 +111,7 @@ const Registration = () => {
 			<div className="flex card card-compact w-full bg-base-100 shadow-2xl">
 
 				<div className="flex-1 p-6 md:p-8 pt-5 pb-1 md:pb-2">
-					<h3 className='text-slate-700 text-2xl my-2 font-bold text-center'>Register your account</h3>
+					<h3 className='text-slate-700 text-2xl my-2 font-bold text-center'>Register your Account</h3>
 				</div>
 
 				<div className='border-t border-slate-300 my-4 mx-6 md:mx-8'></div>
@@ -139,7 +132,7 @@ const Registration = () => {
 							<label className="label pl-0" htmlFor="password">
 								<span className="label-text text-lg">Password</span>
 							</label>
-							<input type="password" id="password" name="password" placeholder="Enter your password" className="input input-bordered" />
+							<input type="password" id="password" name="password" placeholder="Enter your password" className="input input-bordered" autoComplete='true' />
 							<p className="text-red-500 mt-2">{passwordError}</p> {/* Error Message */}
 						</div>
 						<div className="form-control">
