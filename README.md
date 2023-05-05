@@ -12,8 +12,10 @@ So whether you're a beginner or a seasoned pro, we invite you to explore our web
 Thank you for choosing Chef World, and happy cooking!
 
 
+
 ## Live Website Link
 https://chef-world-shamiul.web.app
+
 
 
 ## Features of this Project
@@ -30,4 +32,5 @@ https://chef-world-shamiul.web.app
 11. Toast alerts when favorite recipe button pressed, login and registration is successful.
 12. User's Name and Photo URL update functionality added when registering with email and password.
 13. PDF creation functionality added in Blog page.
+14. Show/Hide password feature added in Login and Registration page.
 
