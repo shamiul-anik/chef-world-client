@@ -9,13 +9,14 @@ const Registration = () => {
 
 	const navigate = useNavigate();
 
-	const { createUser, signInWithGoogle, signInWithGitHub } = useContext(AuthContext);
+	const { createUser, logOut, signInWithGoogle, signInWithGitHub } = useContext(AuthContext);
 
 	const [error, setError] = useState("");
 	const [success, setSuccess] = useState("");
 	const [emailError, setEmailError] = useState("");
 	const [passwordError, setPasswordError] = useState("");
 	const [showPassword, setShowPassword] = useState(false);
+	const [acceptTerms, setAcceptTerms] = useState(false);
 
 	// const [accepted, setAccepted] = useState(false);
 
@@ -58,22 +59,25 @@ const Registration = () => {
 				}
 				setSuccess("Registration successful!");
 				toast.success("Registration successful!");
+				handleLogOut();
 				form.reset();
-				navigate("/");
+				navigate("/login");
 			})
 			.catch(error => {
 				setError(error.message);
 			})
 	};
 
-	const handleShowPassword = (event) => {
-		event.preventDefault();
-		setShowPassword(!showPassword);
+	// Logout 
+	const handleLogOut = () => {
+		logOut()
+			.then((result) => {
+				console.log("Successfully logged out!");
+			})
+			.catch((error) => {
+				console.log(error.message);
+			})
 	};
-
-	// const handleAccepted = event => {
-	//   setAccepted(event.target.checked)
-	// }
 
 	const updateUserData = (currentUser, name, photoURL) => {
 		updateProfile(currentUser, {
@@ -111,6 +115,17 @@ const Registration = () => {
 				setError(error.message);
 			})
 	};
+
+	// Show/Hide Password
+	const handleShowPassword = (event) => {
+		event.preventDefault();
+		setShowPassword(!showPassword);
+	};
+
+	// Accept Terms 
+	const handleAcceptTerms = (event) => {
+		setAcceptTerms(event.target.checked);
+	}
 
 	return (
 		<section className="max-w-lg mx-auto mt-4 lg:mt-20 p-4">
@@ -161,8 +176,16 @@ const Registration = () => {
 							<input type="text" id="photoURL" name="photoURL" placeholder="Enter your photo url" className="input input-bordered" />
 							<p className="text-red-500 mt-2"></p> {/* Error Message */}
 						</div>
-						<div className="form-control mt-6">
-							<button className="btn btn-primary text-lg" type="submit">Register</button>
+						<div className="form-control mt-4">
+							<label className="label !justify-start gap-2 cursor-pointer">
+								<input onChange={handleAcceptTerms} type="checkbox" className="checkbox border-gray-400 shadow-sm" id="terms" />
+								<span htmlFor="terms" className="label-text text-lg">Accept</span>
+								{/* To Open Modal */}
+								<label htmlFor="terms-modal" className="text-lg link link-primary"> Terms & Conditions.</label>
+							</label>
+						</div>
+						<div className="form-control mt-1">
+							<button className="btn btn-primary text-lg" type="submit" disabled={!acceptTerms}>Register</button>
 						</div>
 					</div>
 				</form>
@@ -185,7 +208,50 @@ const Registration = () => {
 						</button>
 					</div>
 				</div>
+			</div>
 
+			{/* Terms & Conditions Modal */}
+			<input type="checkbox" id="terms-modal" className="modal-toggle" />
+			<div className="modal">
+				<div className="modal-box w-11/12 max-w-5xl">
+					<label htmlFor="terms-modal" className="btn btn-sm btn-circle absolute right-3 top-3">✕</label>
+					<h3 className="font-bold text-2xl text-center">Terms and Conditions</h3>
+					<hr className='mt-4' />
+					<div className='text-slate-600 mt-4 text-justify'>
+						<p className="mb-3 font-bold text-lg">Welcome to Chef World website!</p>
+						<p>By using our website, you agree to be bound by the following terms and conditions:</p>
+
+						<div className='mt-3'>
+							<p className='font-semibold underline underline-offset-2 mt-2'>1. Use of Website Content:</p>
+							<p>All content on Chef World website including text, images, recipes, videos, and any other material is for personal use only. You are not allowed to reproduce, modify, distribute, or use any content without our prior written consent.</p>
+
+							<p className='font-semibold underline underline-offset-2 mt-2'>2. Chef Information and Recipes:</p>
+							<p>We strive to provide accurate and up-to-date information about chefs and their recipes, but we do not guarantee the accuracy of such information. Chef World is not responsible for any damages or losses incurred from the use of this information.</p>
+
+							<p className='font-semibold underline underline-offset-2 mt-2'>3. Third-Party Links:</p>
+							<p>Our website may contain links to third-party websites that are not owned or controlled by Chef World. We are not responsible for the content or privacy policies of these websites.</p>
+
+							<p className='font-semibold underline underline-offset-2 mt-2'>4. User Conduct:</p>
+							<p>You are responsible for your use of Chef World website and any content you post. You agree not to use the website for any illegal or harmful purposes, including but not limited to spreading hate speech, infringing on intellectual property rights, or harassing others.</p>
+
+							<p className='font-semibold underline underline-offset-2 mt-2'>5. Disclaimer of Warranties:</p>
+							<p>Chef World website and its content are provided "as is" without any warranties, express or implied. We do not guarantee that the website will be error-free, uninterrupted, or secure.</p>
+
+							<p className='font-semibold underline underline-offset-2 mt-2'>6. Limitation of Liability:</p>
+							<p>Chef World shall not be liable for any damages arising out of your use or inability to use our website, including but not limited to direct, indirect, incidental, consequential, or punitive damages.</p>
+
+							<p className='font-semibold underline underline-offset-2 mt-2'>7. Changes to Terms and Conditions:</p>
+							<p>We reserve the right to modify these terms and conditions at any time. Your continued use of the website after any such changes constitutes your acceptance of the new terms.</p>
+
+						</div>
+
+						<p className='mt-4'>Thank you for using Chef World website. If you have any questions or concerns, please contact us at <span className='text-blue-500'>info@chefworld.com</span>.</p>
+					</div>
+					<hr className='mt-4' />
+					<div className="modal-action">
+						<label htmlFor="terms-modal" className="btn">Okay</label>
+					</div>
+				</div>
 			</div>
 		</section>
 	);

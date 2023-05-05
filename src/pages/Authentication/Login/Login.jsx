@@ -42,11 +42,6 @@ const Login = () => {
 				setLoading(false);
 			})
 	};
-
-	const handleShowPassword = (event) => {
-		event.preventDefault();
-		setShowPassword(!showPassword);
-	};
 	
 	const handleGoogleLogin = () => {
 		signInWithGoogle()
@@ -74,6 +69,12 @@ const Login = () => {
 				setError(error.message);
 				setLoading(false);
 			})
+	};
+
+	// Show/Hide Password
+	const handleShowPassword = (event) => {
+		event.preventDefault();
+		setShowPassword(!showPassword);
 	};
 
 	return (
