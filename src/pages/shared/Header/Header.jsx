@@ -9,7 +9,7 @@ const Header = () => {
 
 	const { user, logOut, loading } = useContext(AuthContext);
 
-	const currentUserName = user?.displayName || "Welcome, user!";
+	const currentUserName = user?.displayName || "Welcome, User!";
 	const currentUserPhotoURL = user?.photoURL || "https://i.ibb.co/rwwW7Qw/user.png";
 
 	// Show Loader when Page is Loading
@@ -84,6 +84,9 @@ const Header = () => {
 									<li className='mt-1 text-center'>{currentUserName}</li>
 									<div className="divider mt-1 mb-2"></div>
 									<li>
+										<Link to="/profile" className="mb-2 bg-blue-500 hover:bg-blue-600 transition hover:delay-200 text-white font-bold py-2 justify-center">Profile</Link>
+									</li>
+									<li>
 										<Link onClick={handleLogOut} className="bg-red-500 hover:bg-red-600 transition hover:delay-200 text-white font-bold py-2 justify-center">Logout</Link>
 									</li>
 								</ul>
@@ -129,6 +132,9 @@ const Header = () => {
 									</div>
 									<li className='mt-1 text-center'>{currentUserName}</li>
 									<div className="divider mt-1 mb-2"></div>
+									<li>
+										<Link to="/profile" className="mb-2 bg-blue-500 hover:bg-blue-600 transition hover:delay-200 text-white font-bold py-2 justify-center">Profile</Link>
+									</li>
 									<li>
 										<Link onClick={handleLogOut} className="bg-red-500 hover:bg-red-600 transition hover:delay-200 text-white font-bold py-2 justify-center">Logout</Link>
 									</li>

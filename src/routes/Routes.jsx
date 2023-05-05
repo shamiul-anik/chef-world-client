@@ -9,6 +9,7 @@ import About from "../pages/About/About";
 import RecipeDetails from "../pages/RecipeDetails/RecipeDetails";
 import PrivateRoute from "./PrivateRoute";
 import PasswordReset from "../pages/Authentication/PasswordReset/PasswordReset";
+import Profile from "../pages/Authentication/Profile/Profile";
 
 export const router = createBrowserRouter([
 	{
@@ -37,6 +38,10 @@ export const router = createBrowserRouter([
 			{
 				path: 'password-reset',
 				element: <PasswordReset></PasswordReset>
+			},
+			{
+				path: 'profile',
+				element: <Profile></Profile>
 			},
 			{
 				path: 'blog',
