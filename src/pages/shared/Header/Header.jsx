@@ -38,7 +38,9 @@ const Header = () => {
 						<label tabIndex={0} className="btn btn-ghost lg:hidden">
 							<svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 6h16M4 12h8m-8 6h16" /></svg>
 						</label>
+						
 						<ul tabIndex={0} className="menu menu-compact dropdown-content mt-3 p-2 shadow-lg bg-base-100 rounded-box w-52">
+							
 							<li>
 								<NavLink to="/">Home</NavLink>
 							</li>
@@ -50,16 +52,9 @@ const Header = () => {
 							</li>
 							{
 								!user && (
-									<div className="flex mt-2">
-										<Link to="/login" className="primary-button-sm flex-1">Login</Link>
-									</div>
-								)
-							}
-							{
-								user && (
-									<div className="flex mt-2">
-										<Link onClick={handleLogOut} className="primary-button-sm flex-1">Logout</Link>
-									</div>
+									<li>
+										<Link to="/login" className="primary-button-sm justify-center">Login</Link>
+									</li>
 								)
 							}
 						</ul>
@@ -69,6 +64,33 @@ const Header = () => {
 						Chef World
 					</Link>
 				</div>
+
+				{/* User Profile */}
+				{
+					user && (
+						<div className="navbar-end mr-1 md:hidden">
+							<div className="dropdown dropdown-end mt-1 ml-6">
+								<label tabIndex={0} className="btn btn-ghost btn-circle avatar tooltip tooltip-bottom" data-tip={currentUserName}>
+									<div className="w-10 rounded-full ring-2 ring-offset-2 ring-slate-400">
+										<img className='object-top' src={currentUserPhotoURL} alt={currentUserName} />
+									</div>
+								</label>
+								<ul tabIndex={0} className="mt-3 p-3 shadow menu menu-compact dropdown-content bg-base-100 rounded-box w-52">
+									<div className='w-full flex justify-center'>
+										<div className="mt-2 mb-3 h-16 w-16 rounded-full ring-2 ring-offset-2 ring-slate-400">
+											<img className='h-16 w-full rounded-full object-cover object-center' src={currentUserPhotoURL} alt={currentUserName} />
+										</div>
+									</div>
+									<li className='mt-1 text-center'>{currentUserName}</li>
+									<div className="divider mt-1 mb-2"></div>
+									<li>
+										<Link onClick={handleLogOut} className="bg-red-500 hover:bg-red-600 transition hover:delay-200 text-white font-bold py-2 justify-center">Logout</Link>
+									</li>
+								</ul>
+							</div>
+						</div>
+					)
+				}
 
 				<div className="navbar-end hidden lg:flex">
 					<ul className="flex gap-10 text-xl font-semibold menu-horizontal px-1">

@@ -134,18 +134,11 @@ const Registration = () => {
 							<input type="email" id="email" name="email" placeholder="Enter your email address" className="input input-bordered" />
 							<p className="text-red-500 mt-2">{emailError}</p> {/* Error Message */}
 						</div>
-						{/* <div className="form-control">
-							<label className="label pl-0" htmlFor="password">
-								<span className="label-text text-lg">Password</span>
-							</label>
-							<input type="password" id="password" name="password" placeholder="Enter your password" className="input input-bordered" autoComplete='true' />
-							<p className="text-red-500 mt-2">{passwordError}</p>
-						</div> */}
 						<div className="relative form-control">
 							<label className="label pl-0" htmlFor="password">
 								<span className="label-text text-lg">Password</span>
 							</label>
-							<input type={showPassword ? "text" : "password"} id="password" name="password" placeholder="Enter your password" className="input input-bordered" autoComplete='true' required />
+							<input type={showPassword ? "text" : "password"} id="password" name="password" placeholder="Enter your password" className="input input-bordered" autoComplete='true' />
 							<button onClick={handleShowPassword} className="btn btn-ghost absolute bottom-0 right-0 rounded-l-none">
 								{
 									showPassword ? <FaRegEyeSlash className='text-lg md:text-xl font-bold' /> : <FaRegEye className='text-lg md:text-xl font-bold' />

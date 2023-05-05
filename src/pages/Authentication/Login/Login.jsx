@@ -26,6 +26,7 @@ const Login = () => {
 		setLoading(true);
 		
 		setError("");
+
 		console.log(email, password);
 
 		logIn(email, password)
@@ -37,7 +38,7 @@ const Login = () => {
 			})
 			.catch(error => {
 				setError(error.message);
-				toast.error("Enter correct email and password!");
+				toast.error("Incorrect email and/or password!");
 				setLoading(false);
 			})
 	};
