@@ -98,17 +98,7 @@ const Login = () => {
 							<input type="email" id="email" name="email" placeholder="Enter your email address" className="input input-bordered" required />
 							<p className="text-red-500 mt-2"></p>
 						</div>
-						{/* <div className="form-control">
-							<label className="label pl-0" htmlFor="password">
-								<span className="label-text text-lg">Password</span>
-							</label>
-							<input type="password" id="password" name="password" placeholder="Enter your password" className="input input-bordered" autoComplete='true' required />
-							<p className="text-red-500 mt-2"></p>
-						</div> */}
-
-							{/* <label className="label">
-								<a href="#" className="label-text-alt link link-hover">Forgot password?</a>
-							</label> */}
+						
 						<div className="relative form-control">
 							<label className="label pl-0" htmlFor="password">
 								<span className="label-text text-lg">Password</span>
@@ -121,6 +111,11 @@ const Login = () => {
 							</button>
 						</div>
 						<p className="text-red-500 mt-2"></p>
+						
+						<div className="text-md">
+							Forgot your password? &nbsp;
+							<Link to="/password-reset" className='link link-error'>Reset Password</Link>
+						</div>
 
 						<div className="form-control mt-6">
 							<button className="btn btn-primary text-lg" type="submit">Login</button>

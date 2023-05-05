@@ -8,6 +8,7 @@ import Home from "../pages/Home/Home";
 import About from "../pages/About/About";
 import RecipeDetails from "../pages/RecipeDetails/RecipeDetails";
 import PrivateRoute from "./PrivateRoute";
+import PasswordReset from "../pages/Authentication/PasswordReset/PasswordReset";
 
 export const router = createBrowserRouter([
 	{
@@ -32,6 +33,10 @@ export const router = createBrowserRouter([
 			{
 				path: 'registration',
 				element: <Registration></Registration>
+			},
+			{
+				path: 'password-reset',
+				element: <PasswordReset></PasswordReset>
 			},
 			{
 				path: 'blog',
