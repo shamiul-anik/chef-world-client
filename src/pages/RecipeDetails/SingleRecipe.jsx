@@ -3,12 +3,13 @@ import { FaHeart, FaRegHeart } from 'react-icons/fa';
 import { toast } from 'react-toastify';
 import { Rating } from '@smastrom/react-rating';
 import '@smastrom/react-rating/style.css';
+import LazyLoad from 'react-lazy-load';
 
 const SingleRecipe = ({ recipe }) => {
 
   const [favorite, setFavorite] = useState(false);
 
-  const { recipe_name, recipe_ingredients, cooking_method, rating } = recipe;
+  const { recipe_name, recipe_url, recipe_ingredients, cooking_method, rating } = recipe;
 
   const handleFavorite = () => {
     setFavorite(true);
@@ -17,6 +18,11 @@ const SingleRecipe = ({ recipe }) => {
 
   return (
     <div className="flex card card-compact w-full bg-base-100 box-shadow-custom">
+      <LazyLoad offset={300}>
+        <figure>
+          <img className='h-[400px] w-full rounded-t-2xl object-cover' src={recipe_url} alt={recipe_name} />
+        </figure>
+      </LazyLoad>
       <div className="flex-1 p-6 md:p-8 pt-4 pb-1 md:pb-2">
         <h3 className='text-slate-700 text-2xl my-2 font-bold text-center'>{recipe_name}</h3>
         <div>
