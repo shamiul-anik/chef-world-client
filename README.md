@@ -22,8 +22,8 @@ https://chef-world-shamiul.web.app
 1. Full project is made with responsive design for both mobile and pc.
 2. A Navbar with navigation options, profile picture when logged in and a login button. Active styles for different routes on the Navbar also added.
 3. Homepage with a Banner, Statistics, Chefs, Latest Recipes, Reward and Newsletter sections. Here Statistics, Latest Recipes, Reward and Newsletter are extra sections added as per the requirement.
-4. Lazy load feature implemented for Chef section.
-5. Clicking on the View Recipes button will redirect the user to the '/recipes/:id' route showing all the details of the Chefs and their recipes.
+4. Lazy load feature implemented for Chef section and Recipe section.
+5. Clicking on the View Recipes button will redirect the user to the '/recipes/:id' route showing all the details of the Chefs and their recipes with images.
 6. An Error handling (404) page with error message and animated text and image added for error handling.
 7. A Blog page with a banner and answers to questions related to React also added.
 8. Dynamic title on the tab added which changes with the menu using custom hook.
