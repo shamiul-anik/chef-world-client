@@ -1,15 +1,16 @@
 import React, { useContext, useState } from 'react';
-import { FaGithub, FaGoogle, FaRegEye, FaRegEyeSlash } from 'react-icons/fa';
+import { FaFacebook, FaGithub, FaGoogle, FaRegEye, FaRegEyeSlash, FaTwitter, FaYahoo } from 'react-icons/fa';
 import { Link, useLocation, useNavigate } from 'react-router-dom';
 import { AuthContext } from '../../../providers/AuthProvider';
 import { toast } from 'react-toastify';
 import { useTitle } from '../../../hooks/useTitle';
+import Loader from '../../shared/Loader/Loader';
 
 const Login = () => {
 
 	useTitle("Login");
 
-	const { setLoading, logIn, signInWithGoogle, signInWithGitHub } = useContext(AuthContext);
+	const { loading, setLoading, logIn, signInWithGoogle, signInWithGitHub, signInWithFacebook, signInWithTwitter, signInWithYahoo } = useContext(AuthContext);
 
 	const [error, setError] = useState("");
 	const [showPassword, setShowPassword] = useState(false);
@@ -19,6 +20,11 @@ const Login = () => {
 	const location = useLocation();
 	// console.log('login page location', location)
 	const from = location.state?.from?.pathname || '/';
+
+	// Show Loader when Page is Loading
+	if (loading) {
+		return <Loader></Loader>;
+	}
 
 	const handleLogin = (event) => {
 		event.preventDefault();
@@ -67,6 +73,51 @@ const Login = () => {
 				console.log(loggedUser);
 				toast.success("Successfully logged in!");
 				navigate(from, { replace: true })
+			})
+			.catch(error => {
+				setError(error.message);
+				setLoading(false);
+			})
+	};
+	
+	const handleFacebookLogin = () => {
+		signInWithFacebook()
+			.then(result => {
+				const loggedUser = result.user;
+				console.log(loggedUser);
+				toast.success("Successfully logged in using Facebook!");
+				navigate(from, { replace: true })
+				setLoading(false);
+			})
+			.catch(error => {
+				setError(error.message);
+				setLoading(false);
+			})
+	};
+	
+	const handleTwitterLogin = () => {
+		signInWithTwitter()
+			.then(result => {
+				const loggedUser = result.user;
+				console.log(loggedUser);
+				toast.success("Successfully logged in using Twitter!");
+				navigate(from, { replace: true })
+				setLoading(false);
+			})
+			.catch(error => {
+				setError(error.message);
+				setLoading(false);
+			})
+	};
+	
+	const handleYahooLogin = () => {
+		signInWithYahoo()
+			.then(result => {
+				const loggedUser = result.user;
+				console.log(loggedUser);
+				toast.success("Successfully logged in using Yahoo!");
+				navigate(from, { replace: true })
+				setLoading(false);
 			})
 			.catch(error => {
 				setError(error.message);
@@ -131,16 +182,36 @@ const Login = () => {
 				</div>
 
 				<div className='border-t border-slate-300 my-4 mx-6 md:mx-8'></div>
+
+				<div className="flex-1 p-4 md:pb-2">
+					<h4 className='mb-2 text-slate-500 text-xl font-bold text-center'> ----------- OR ----------- </h4>
+					<h4 className='text-slate-700 text-xl font-bold text-center'>Login with</h4>
+				</div>
 				
-				<div className="!px-6 md:!px-8 !pt-3 card-body">
+				<div className="grid md:grid-cols-2 gap-2 !px-6 md:!px-8 !pt-3 card-body">
 					<div className="form-control">
-						<button onClick={handleGoogleLogin} className="btn btn-outline btn-primary text-lg">
-							<FaGoogle className="mr-2" /> Login with Google
+						<button onClick={handleGoogleLogin} className="btn btn-outline btn-accent text-lg">
+							<FaGoogle className="mr-2" /> Google
 						</button>
 					</div>
-					<div className="form-control mt-1 mb-5">
+					<div className="form-control">
 						<button onClick={handleGitHubLogin} className="btn btn-outline btn-base text-lg">
-							<FaGithub className="mr-2" /> Login with GitHub
+							<FaGithub className="mr-2" /> GitHub
+						</button>
+					</div>
+					<div className="form-control">
+						<button onClick={handleTwitterLogin} className="btn btn-outline btn-primary text-lg">
+							<FaTwitter className="mr-2" /> Twitter
+						</button>
+					</div>
+					<div className="form-control">
+						<button onClick={handleFacebookLogin} className="btn btn-outline btn-info text-lg">
+							<FaFacebook className="mr-2" /> Facebook
+						</button>
+					</div>
+					<div className="form-control mb-5">
+						<button onClick={handleYahooLogin} className="btn btn-outline btn-warning text-lg">
+							<FaYahoo className="mr-2" /> Yahoo
 						</button>
 					</div>
 				</div>

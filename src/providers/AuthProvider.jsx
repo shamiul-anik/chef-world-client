@@ -1,5 +1,5 @@
 import React, { createContext } from 'react';
-import { GithubAuthProvider, GoogleAuthProvider, createUserWithEmailAndPassword, getAuth, onAuthStateChanged, sendPasswordResetEmail, signInWithEmailAndPassword, signInWithPopup, signOut } from "firebase/auth";
+import { FacebookAuthProvider, GithubAuthProvider, GoogleAuthProvider, OAuthProvider, TwitterAuthProvider, createUserWithEmailAndPassword, getAuth, onAuthStateChanged, sendPasswordResetEmail, signInWithEmailAndPassword, signInWithPopup, signOut } from "firebase/auth";
 import app from '../utilities/firebase.config';
 import { useEffect } from 'react';
 import { useState } from 'react';
@@ -9,6 +9,9 @@ export const AuthContext = createContext(null);
 const auth = getAuth(app);
 const googleAuthProvider = new GoogleAuthProvider();
 const gitHubAuthProvider = new GithubAuthProvider();
+const facebookAuthProvider = new FacebookAuthProvider();
+const twitterAuthProvider = new TwitterAuthProvider();
+const yahooAuthProvider = new OAuthProvider('yahoo.com');
 
 const AuthProvider = ({ children }) => {
 	const [user, setUser] = useState(null);
@@ -43,6 +46,21 @@ const AuthProvider = ({ children }) => {
 		setLoading(true);
 		return signInWithPopup(auth, gitHubAuthProvider);
 	}
+	
+	const signInWithFacebook = () => {
+		setLoading(true);
+		return signInWithPopup(auth, facebookAuthProvider);
+	}
+	
+	const signInWithTwitter = () => {
+		setLoading(true);
+		return signInWithPopup(auth, twitterAuthProvider);
+	}
+	
+	const signInWithYahoo = () => {
+		setLoading(true);
+		return signInWithPopup(auth, yahooAuthProvider);
+	}
 
 
 	useEffect(() => {
@@ -67,6 +85,9 @@ const AuthProvider = ({ children }) => {
 		resetPassword,
 		signInWithGoogle,
 		signInWithGitHub,
+		signInWithFacebook,
+		signInWithTwitter,
+		signInWithYahoo,
 		logOut
 	}
 

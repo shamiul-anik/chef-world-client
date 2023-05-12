@@ -22,7 +22,7 @@ const Statistics = () => {
             <TbChefHat className='h-24 w-24 text-slate-600 aspect-square' />
           </div>
           <div className="p-4 pt-2 pb-6 text-center">
-            <h2 className="card-title justify-center text-3xl font-bold text-blue-500">42</h2>
+            <h2 className="card-title justify-center text-2xl font-bold text-blue-800">42</h2>
             <p className='text-slate-700 font-semibold'>Members</p>
           </div>
         </div>
@@ -32,7 +32,7 @@ const Statistics = () => {
             <BiFoodMenu className='h-24 w-24 text-slate-600 aspect-square' />
           </div>
           <div className="p-4 pt-2 pb-6 text-center">
-            <h2 className="card-title justify-center text-3xl font-bold text-blue-500">16</h2>
+            <h2 className="card-title justify-center text-2xl font-bold text-blue-800">16</h2>
             <p className='text-slate-700 font-semibold'>Recipes</p>
           </div>
         </div>
@@ -42,7 +42,7 @@ const Statistics = () => {
             <FaImage className='h-24 w-24 text-slate-600 aspect-square' />
           </div>
           <div className="p-4 pt-2 pb-6 text-center">
-            <h2 className="card-title justify-center text-3xl font-bold text-blue-500">127</h2>
+            <h2 className="card-title justify-center text-2xl font-bold text-blue-800">127</h2>
             <p className='text-slate-700 font-semibold'>Photos</p>
           </div>
         </div>
@@ -52,7 +52,7 @@ const Statistics = () => {
             <FaPenFancy className='h-24 w-24 text-slate-600 aspect-square' />
           </div>
           <div className="p-4 pt-2 pb-6 text-center">
-            <h2 className="card-title justify-center text-3xl font-bold text-blue-500">13</h2>
+            <h2 className="card-title justify-center text-2xl font-bold text-blue-800">13</h2>
             <p className='text-slate-700 font-semibold'>Forums Posts</p>
           </div>
         </div>
@@ -62,7 +62,7 @@ const Statistics = () => {
             <FaComments className='h-24 w-24 text-slate-600 aspect-square' />
           </div>
           <div className="p-4 pt-2 pb-6 text-center">
-            <h2 className="card-title justify-center text-3xl font-bold text-blue-500">56</h2>
+            <h2 className="card-title justify-center text-2xl font-bold text-blue-800">56</h2>
             <p className='text-slate-700 font-semibold'>Comments</p>
           </div>
         </div>
@@ -72,7 +72,7 @@ const Statistics = () => {
             <RiArticleLine className='h-24 w-24 text-slate-600 aspect-square' />
           </div>
           <div className="p-4 pt-2 pb-6 text-center">
-            <h2 className="card-title justify-center text-3xl font-bold text-blue-500">12</h2>
+            <h2 className="card-title justify-center text-2xl font-bold text-blue-800">12</h2>
             <p className='text-slate-700 font-semibold'>Articles</p>
           </div>
         </div>

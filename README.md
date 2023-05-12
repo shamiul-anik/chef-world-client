@@ -16,6 +16,11 @@ Thank you for choosing Chef World, and happy cooking!
 ## Live Website Link
 https://chef-world-shamiul.web.app
 
+
+## Server Side Code
+https://github.com/shamiul-anik/chef-world-server
+
+
 ## API Links
 
 ### All Chef's Details :
@@ -42,4 +47,6 @@ https://chef-world-server.vercel.app/recipes/:id (For example: https://chef-worl
 13. PDF creation functionality added in Blog page.
 14. Show/Hide password feature added in Login and Registration page.
 15. Accept terms and conditions to continue with the registration process functionality added.
+16. User profile added with update functionality.
+17. Social login functionality added using Google, Facebook, Twitter, Yahoo and GitHub profiles.
 

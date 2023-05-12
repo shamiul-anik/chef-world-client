@@ -10,6 +10,7 @@ import RecipeDetails from "../pages/RecipeDetails/RecipeDetails";
 import PrivateRoute from "./PrivateRoute";
 import PasswordReset from "../pages/Authentication/PasswordReset/PasswordReset";
 import Profile from "../pages/Authentication/Profile/Profile";
+import BlogPDF from "../pages/Blog/BlogPDF";
 
 export const router = createBrowserRouter([
 	{
@@ -46,6 +47,10 @@ export const router = createBrowserRouter([
 			{
 				path: 'blog',
 				element: <Blog></Blog>
+			},
+			{
+				path: 'pdf',
+				element: <BlogPDF></BlogPDF>
 			},
 			{
 				path: 'about',

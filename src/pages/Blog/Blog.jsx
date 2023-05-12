@@ -1,8 +1,11 @@
 import React from 'react';
 import ReactBanner from '../../assets/images/react-banner.png';
-import Pdf from "react-to-pdf";
-import { toast } from 'react-toastify';
+// import Pdf from "react-to-pdf";
+// import { toast } from 'react-toastify';
 import { useTitle } from '../../hooks/useTitle';
+import BlogPDF from './BlogPDF';
+import { PDFDownloadLink } from '@react-pdf/renderer';
+import { FaFilePdf, FaSpinner } from 'react-icons/fa';
 
 const Blog = () => {
 
@@ -16,11 +19,11 @@ const Blog = () => {
   //   }
   // }, [checkLocation]);
 
-  const ref = React.createRef();
-  const options = {
-    orientation: 'portrait',
-    unit: 'in'
-  };
+  // const ref = React.createRef();
+  // const options = {
+  //   orientation: 'portrait',
+  //   unit: 'in'
+  // };
 
   return (
     <div>
@@ -31,13 +34,20 @@ const Blog = () => {
           <h2 className="content-title text-center">React Q&A Blog</h2>
         </header>
 
+        
+
         <div className="text-center md:text-right mt-4">
-          <Pdf targetRef={ref} filename="blog.pdf" options={options} x={.2} y={.2} scale={0.6} onComplete={ () => toast.success("PDF successfully created!") }>
-            {({ toPdf }) => <button className='primary-button-md' onClick={toPdf}>Generate PDF</button>}
-          </Pdf>
+          {/* <Pdf targetRef={ref} filename="blog.pdf" options={options} x={.2} y={.2} scale={0.6} onComplete={ () => toast.success("PDF successfully created!") }>
+            {({ toPdf }) => <button className='btn mr-2' onClick={toPdf}><FaFilePdf className='mr-2' /> React PDF (Screen Shot)</button>}
+          </Pdf> */}
+          <PDFDownloadLink className='btn mt-2 md:mt-0' document={<BlogPDF />} fileName="blog.pdf">
+            {({ loading }) =>
+              loading ? <><FaSpinner className='mr-2' /> Loading...</> : <><FaFilePdf className='mr-2' /> Download Blog (PDF)</>
+            }
+          </PDFDownloadLink>
         </div>
 
-        <div className="p-4 lg:p-8 rounded-lg box-shadow-custom mt-6" ref={ref}>
+        <div className="p-4 lg:p-8 rounded-lg box-shadow-custom mt-6">
           {/* React Banner */}
           <div className="question-img">
             <img src={ReactBanner} alt="Q&amp;A Banner" />

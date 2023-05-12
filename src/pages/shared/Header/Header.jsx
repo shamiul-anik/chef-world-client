@@ -1,13 +1,16 @@
 import React, { useContext } from 'react';
 import './Header.css';
-import { Link, NavLink } from 'react-router-dom';
+import { Link, NavLink, useNavigate } from 'react-router-dom';
 import { TbChefHat } from "react-icons/tb";
 import { AuthContext } from '../../../providers/AuthProvider';
 import Loader from '../Loader/Loader';
+import { toast } from 'react-toastify';
 
 const Header = () => {
 
-	const { user, logOut, loading } = useContext(AuthContext);
+	const { user, logOut, loading, setLoading } = useContext(AuthContext);
+
+	const navigate = useNavigate();
 
 	const currentUserName = user?.displayName || "Welcome, User!";
 	const currentUserPhotoURL = user?.photoURL || "https://i.ibb.co/rwwW7Qw/user.png";
@@ -17,16 +20,19 @@ const Header = () => {
 		return <Loader></Loader>;
 	}
 
+
 	// console.log("Name from Header: ", currentUserName);
 	// console.log("Photo URL from Header: ", currentUserPhotoURL);
 
 	const handleLogOut = () => {
 		logOut()
-			.then((result) => {
-				console.log("Successfully logged out!");
+		.then(() => {
+				toast.success("Successfully logged out!");
+				navigate("/");
 			})
 			.catch((error) => {
 				console.log(error.message);
+				setLoading(false);
 			})
 	};
 

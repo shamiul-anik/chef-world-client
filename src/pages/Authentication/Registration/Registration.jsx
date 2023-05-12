@@ -93,12 +93,12 @@ const Registration = () => {
 		});
 	};
 
-	const handleGoogleLogin = () => {
+	const handleGoogleRegistration = () => {
 		signInWithGoogle()
 			.then(result => {
 				const loggedUser = result.user;
 				console.log(loggedUser);
-				toast.success("Successfully logged in!");
+				toast.success("Successfully registered!");
 				navigate("/");
 			})
 			.catch(error => {
@@ -106,12 +106,12 @@ const Registration = () => {
 			})
 	};
 
-	const handleGitHubLogin = () => {
+	const handleGitHubRegistration = () => {
 		signInWithGitHub()
 			.then(result => {
 				const loggedUser = result.user;
 				console.log(loggedUser);
-				toast.success("Successfully logged in!");
+				toast.success("Successfully registered!");
 				navigate("/");
 			})
 			.catch(error => {
@@ -201,13 +201,13 @@ const Registration = () => {
 
 				<div className="!px-6 md:!px-8 !pt-3 card-body">
 					<div className="form-control">
-						<button onClick={handleGoogleLogin} className="btn btn-outline btn-primary text-lg">
-							<FaGoogle className="mr-2" /> Login with Google
+						<button onClick={handleGoogleRegistration} className="btn btn-outline btn-primary text-lg">
+							<FaGoogle className="mr-2" /> Register with Google
 						</button>
 					</div>
 					<div className="form-control mt-1 mb-5">
-						<button onClick={handleGitHubLogin} className="btn btn-outline btn-base text-lg">
-							<FaGithub className="mr-2" /> Login with GitHub
+						<button onClick={handleGitHubRegistration} className="btn btn-outline btn-base text-lg">
+							<FaGithub className="mr-2" /> Register with GitHub
 						</button>
 					</div>
 				</div>
@@ -216,11 +216,11 @@ const Registration = () => {
 			{/* Terms & Conditions Modal */}
 			<input type="checkbox" id="terms-modal" className="modal-toggle" />
 			<div className="modal">
-				<div className="modal-box w-11/12 max-w-5xl">
+				<div className="modal-box w-11/12 max-w-5xl !overflow-y-hidden">
 					<label htmlFor="terms-modal" className="btn btn-sm btn-circle absolute right-3 top-3">✕</label>
 					<h3 className="font-bold text-2xl text-center">Terms and Conditions</h3>
 					<hr className='mt-4' />
-					<div className='text-slate-600 mt-4 text-justify'>
+					<div className='text-slate-600 mt-4 text-justify pr-4 overflow-y-auto max-h-[calc(100dvh-300px)]'>
 						<p className="mb-3 font-bold text-lg">Welcome to Chef World website!</p>
 						<p>By using our website, you agree to be bound by the following terms and conditions:</p>
 
