@@ -23,12 +23,12 @@ const About = () => {
 			</div>
 
 			{/* Find Us */}
-			<div className="mt-24">
+			{/* <div className="mt-24">
 				<header>
 					<h2 className="content-title text-center">Find Us</h2>
 				</header>
 				
-			</div>
+			</div> */}
 
 
 		</div>
