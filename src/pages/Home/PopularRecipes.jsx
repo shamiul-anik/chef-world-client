@@ -1,4 +1,5 @@
 import React from 'react';
+import LazyLoad from 'react-lazy-load';
 import { FaComment, FaTasks } from 'react-icons/fa';
 import RecipeImage1 from '../../assets/images/chinese_food/stir-fried-green-beans.jpg';
 import RecipeImage2 from '../../assets/images/chinese_food/kung-pao-chicken.jpg';
@@ -18,9 +19,11 @@ const PopularRecipes = () => {
       <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-4 lg:gap-6 mt-8">
 
         <div className="flex card card-compact w-full bg-base-100 shadow-xl">
-          <figure>
-            <img className='h-56 w-full object-cover' src={RecipeImage1} alt="Stir-fried Green Beans" />
-          </figure>
+          <LazyLoad offset={500}>
+            <figure>
+              <img className='h-56 w-full object-cover' src={RecipeImage1} alt="Stir-fried Green Beans" />
+            </figure>
+          </LazyLoad>
           <div className="flex-1 p-4 pt-4 pb-0">
             <h3 className='text-center text-xl text-slate-700 font-semibold'>Stir-fried Green Beans</h3>
           </div>
@@ -38,9 +41,11 @@ const PopularRecipes = () => {
         </div>
 
         <div className="flex card card-compact w-full bg-base-100 shadow-xl">
-          <figure>
-            <img className='h-56 w-full object-cover' src={RecipeImage2} alt="Kung Pao Chicken" />
-          </figure>
+          <LazyLoad offset={500}>
+            <figure>
+              <img className='h-56 w-full object-cover' src={RecipeImage2} alt="Kung Pao Chicken" />
+            </figure>
+          </LazyLoad>
           <div className="flex-1 p-4 pt-4 pb-0">
             <h3 className='text-center text-xl text-slate-700 font-semibold'>Kung Pao Chicken</h3>
           </div>
@@ -58,9 +63,11 @@ const PopularRecipes = () => {
         </div>
 
         <div className="flex card card-compact w-full bg-base-100 shadow-xl">
-          <figure>
-            <img className='h-56 w-full object-cover' src={RecipeImage3} alt="Hot and Sour Soup" />
-          </figure>
+          <LazyLoad offset={500}>
+            <figure>
+              <img className='h-56 w-full object-cover' src={RecipeImage3} alt="Hot and Sour Soup" />
+            </figure>
+          </LazyLoad>
           <div className="flex-1 p-4 pt-4 pb-0">
             <h3 className='text-center text-xl text-slate-700 font-semibold'>Hot and Sour Soup</h3>
           </div>
@@ -78,9 +85,11 @@ const PopularRecipes = () => {
         </div>
 
         <div className="flex card card-compact w-full bg-base-100 shadow-xl">
-          <figure>
-            <img className='h-56 w-full object-cover' src={RecipeImage4} alt="Dumplings" />
-          </figure>
+          <LazyLoad offset={500}>
+            <figure>
+              <img className='h-56 w-full object-cover' src={RecipeImage4} alt="Dumplings" />
+            </figure>
+          </LazyLoad>
           <div className="flex-1 p-4 pt-4 pb-0">
             <h3 className='text-center text-xl text-slate-700 font-semibold'>Dumplings</h3>
           </div>

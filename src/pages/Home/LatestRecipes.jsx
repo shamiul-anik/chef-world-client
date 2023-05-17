@@ -1,4 +1,5 @@
 import React from 'react';
+import LazyLoad from 'react-lazy-load';
 import { FaComment, FaTasks } from 'react-icons/fa';
 import RecipeImage1 from '../../assets/images/recipes/shanghai-fried -noodles.jpg';
 import RecipeImage2 from '../../assets/images/recipes/xiaolongbao.jpg';
@@ -18,9 +19,11 @@ const LatestRecipes = () => {
       <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-4 lg:gap-6 mt-8">
 
         <div className="flex card card-compact w-full bg-base-100 shadow-xl">
-          <figure>
-            <img className='h-56 w-full object-cover' src={RecipeImage1} alt="Shanghai Fried Noodles" />
-          </figure>
+          <LazyLoad offset={500}>
+            <figure>
+              <img className='h-56 w-full object-cover' src={RecipeImage1} alt="Shanghai Fried Noodles" />
+            </figure>
+          </LazyLoad>
           <div className="flex-1 p-4 pt-4 pb-0">
             <h3 className='text-center text-xl text-slate-700 font-semibold'>Shanghai Fried Noodles</h3>
           </div>
@@ -38,9 +41,11 @@ const LatestRecipes = () => {
         </div>
 
         <div className="flex card card-compact w-full bg-base-100 shadow-xl">
-          <figure>
-            <img className='h-56 w-full object-cover' src={RecipeImage2} alt="Xiaolongbao" />
-          </figure>
+          <LazyLoad offset={500}>
+            <figure>
+              <img className='h-56 w-full object-cover' src={RecipeImage2} alt="Xiaolongbao" />
+            </figure>
+          </LazyLoad>
           <div className="flex-1 p-4 pt-4 pb-0">
             <h3 className='text-center text-xl text-slate-700 font-semibold'>Xiaolongbao</h3>
           </div>
@@ -58,9 +63,11 @@ const LatestRecipes = () => {
         </div>
 
         <div className="flex card card-compact w-full bg-base-100 shadow-xl">
-          <figure>
-            <img className='h-56 w-full object-cover' src={RecipeImage3} alt="Egg Drop Soup" />
-          </figure>
+          <LazyLoad offset={500}>
+            <figure>
+              <img className='h-56 w-full object-cover' src={RecipeImage3} alt="Egg Drop Soup" />
+            </figure>
+          </LazyLoad>
           <div className="flex-1 p-4 pt-4 pb-0">
             <h3 className='text-center text-xl text-slate-700 font-semibold'>Egg Drop Soup</h3>
           </div>
@@ -78,9 +85,11 @@ const LatestRecipes = () => {
         </div>
         
         <div className="flex card card-compact w-full bg-base-100 shadow-xl">
-          <figure>
-            <img className='h-56 w-full object-cover' src={RecipeImage4} alt="Mapo Tofu" />
-          </figure>
+          <LazyLoad offset={500}>
+            <figure>
+              <img className='h-56 w-full object-cover' src={RecipeImage4} alt="Mapo Tofu" />
+            </figure>
+          </LazyLoad>
           <div className="flex-1 p-4 pt-4 pb-0">
             <h3 className='text-center text-xl text-slate-700 font-semibold'>Mapo Tofu</h3>
           </div>
