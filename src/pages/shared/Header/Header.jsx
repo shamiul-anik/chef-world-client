@@ -16,9 +16,9 @@ const Header = () => {
 	const currentUserPhotoURL = user?.photoURL || "https://i.ibb.co/rwwW7Qw/user.png";
 
 	// Show Loader when Page is Loading
-	if (loading) {
-		return <Loader></Loader>;
-	}
+	// if (loading) {
+	// 	return <Loader></Loader>;
+	// }
 
 
 	// console.log("Name from Header: ", currentUserName);

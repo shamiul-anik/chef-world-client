@@ -1,6 +1,6 @@
 import React from 'react';
-import { FaThumbsUp, FaUserClock } from 'react-icons/fa';
 import LazyLoad from 'react-lazy-load';
+import { FaThumbsUp, FaUserClock } from 'react-icons/fa';
 import { Link } from 'react-router-dom';
 
 // eslint-disable-next-line react/prop-types

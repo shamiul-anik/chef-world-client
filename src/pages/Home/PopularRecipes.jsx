@@ -21,7 +21,7 @@ const PopularRecipes = () => {
         <div className="flex card card-compact w-full bg-base-100 shadow-xl">
           <LazyLoad offset={500}>
             <figure>
-              <img className='h-56 w-full object-cover' src={RecipeImage1} alt="Stir-fried Green Beans" />
+              <img className='h-56 w-full object-cover rounded-xl' src={RecipeImage1} alt="Stir-fried Green Beans" />
             </figure>
           </LazyLoad>
           <div className="flex-1 p-4 pt-4 pb-0">
@@ -43,7 +43,7 @@ const PopularRecipes = () => {
         <div className="flex card card-compact w-full bg-base-100 shadow-xl">
           <LazyLoad offset={500}>
             <figure>
-              <img className='h-56 w-full object-cover' src={RecipeImage2} alt="Kung Pao Chicken" />
+              <img className='h-56 w-full object-cover rounded-xl' src={RecipeImage2} alt="Kung Pao Chicken" />
             </figure>
           </LazyLoad>
           <div className="flex-1 p-4 pt-4 pb-0">
@@ -65,7 +65,7 @@ const PopularRecipes = () => {
         <div className="flex card card-compact w-full bg-base-100 shadow-xl">
           <LazyLoad offset={500}>
             <figure>
-              <img className='h-56 w-full object-cover' src={RecipeImage3} alt="Hot and Sour Soup" />
+              <img className='h-56 w-full object-cover rounded-xl' src={RecipeImage3} alt="Hot and Sour Soup" />
             </figure>
           </LazyLoad>
           <div className="flex-1 p-4 pt-4 pb-0">
@@ -87,7 +87,7 @@ const PopularRecipes = () => {
         <div className="flex card card-compact w-full bg-base-100 shadow-xl">
           <LazyLoad offset={500}>
             <figure>
-              <img className='h-56 w-full object-cover' src={RecipeImage4} alt="Dumplings" />
+              <img className='h-56 w-full object-cover rounded-xl' src={RecipeImage4} alt="Dumplings" />
             </figure>
           </LazyLoad>
           <div className="flex-1 p-4 pt-4 pb-0">

@@ -51,3 +51,78 @@ https://chef-world-server.vercel.app/recipes/:id (For example: https://chef-worl
 17. Social login functionality added using Google, Facebook, Twitter, Yahoo and GitHub profiles.
 18. React lazy load added for better user experience and optimization.
 
+
+## Packages/Services/Font Used:
+<table>
+  <thead>
+    <tr>
+      <th>Serial No.</th>
+      <th>Name</th>
+      <th>Link</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td align="center">1</td>
+      <td>React-pdf</td>
+      <td>https://react-pdf.org/</td>
+    </tr>
+    <tr>
+      <td align="center">2</td>
+      <td>Tailwind CSS</td>
+      <td>https://tailwindcss.com/</td>
+    </tr>
+    <tr>
+      <td align="center">3</td>
+      <td>daisyUI</td>
+      <td>https://daisyui.com/</td>
+    </tr>
+    <tr>
+      <td align="center">4</td>
+      <td>React Icons</td>
+      <td>https://react-icons.github.io/react-icons</td>
+    </tr>
+    <tr>
+      <td align="center">5</td>
+      <td>React Rating</td>
+      <td>https://react-rating.onrender.com/</td>
+    </tr>
+    <tr>
+      <td align="center">6</td>
+      <td>React Router</td>
+      <td>https://reactrouter.com/en/main</td>
+    </tr>
+    <tr>
+      <td align="center">7</td>
+      <td>Firebase</td>
+      <td>https://firebase.google.com</td>
+    </tr>
+    <tr>
+      <td align="center">8</td>
+      <td>Google Font</td>
+      <td>https://fonts.google.com/specimen/Poppins</td>
+    </tr>
+    <tr>
+      <td align="center">9</td>
+      <td>Lottie React</td>
+      <td>https://www.npmjs.com/package/lottie-react</td>
+    </tr>
+    <tr>
+      <td align="center">10</td>
+      <td>React Toastify</td>
+      <td>https://www.npmjs.com/package/react-toastify</td>
+    </tr>
+    <tr>
+      <td align="center">11</td>
+      <td>React Lazy Load</td>
+      <td>https://github.com/loktar00/react-lazy-load</td>
+    </tr>
+    <!-- 
+      <tr>
+        <td align="center">12</td>
+        <td>NAME</td>
+        <td>LINK</td>
+      </tr>
+    -->
+  </tbody>
+</table>
