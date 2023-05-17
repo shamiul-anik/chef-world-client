@@ -1,4 +1,7 @@
 # Chef World
+
+![Alt text](src/assets/images/chef.png)
+
 Welcome to Chinese Chef World, your ultimate destination for exploring the rich and diverse world of Chinese cuisine!
 
 Our website is dedicated to bringing you comprehensive information about Chinese chefs and their signature recipes, as well as the latest news, trends, and insights about Chinese cuisine.
