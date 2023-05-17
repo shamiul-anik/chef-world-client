@@ -5,7 +5,7 @@ import Reward from './Reward';
 import Statistics from './Statistics';
 import LatestRecipes from './LatestRecipes';
 import Chefs from './Chefs';
-import { useLoaderData } from 'react-router-dom';
+// import { useLoaderData } from 'react-router-dom';
 import { useTitle } from '../../hooks/useTitle';
 import PopularRecipes from './PopularRecipes';
 import Categories from './Categories';
@@ -14,22 +14,18 @@ const Home = () => {
   
   useTitle("Home");
 
-  const chefDetailsLoadedData = useLoaderData();
+  // const chefDetailsLoadedData = useLoaderData();
   const [chefDetails, setChefDetails] = useState([]);
   
-  // const checkLocation = useLocation();
   // useEffect(() => {
-  //   if (checkLocation.pathname === '/') {
-  //     document.title = 'Chef World | Home';
-  //   }
-  // }, [checkLocation]);
+  //   setChefDetails(chefDetailsLoadedData);
+  // }, [chefDetailsLoadedData]);
 
-
- 
   useEffect(() => {
-    // console.log("Data of Chef Details from Home");
-    setChefDetails(chefDetailsLoadedData);
-  }, [chefDetailsLoadedData]);
+    fetch('https://chef-world-server.vercel.app/chefs')
+    .then(res => res.json())
+    .then(data => setChefDetails(data))
+  }, []);
 
   return (
     <div>

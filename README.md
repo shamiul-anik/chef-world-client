@@ -49,4 +49,5 @@ https://chef-world-server.vercel.app/recipes/:id (For example: https://chef-worl
 15. Accept terms and conditions to continue with the registration process functionality added.
 16. User profile added with update functionality.
 17. Social login functionality added using Google, Facebook, Twitter, Yahoo and GitHub profiles.
+18. React lazy load added for better user experience and optimization.
 

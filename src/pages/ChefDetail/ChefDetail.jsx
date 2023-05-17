@@ -10,7 +10,7 @@ const ChefDetail = ({ chefDetail }) => {
 
   return (
     <div className="flex card card-compact w-full bg-base-100 shadow-xl">
-      <LazyLoad offset={300}>
+      <LazyLoad offset={500}>
         <figure>
           <img className='h-96 w-full rounded-t-2xl object-cover' src={photo_url} alt={chef_name} />
         </figure>
